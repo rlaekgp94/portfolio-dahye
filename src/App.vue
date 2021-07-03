@@ -1,30 +1,27 @@
 <template>
   <div id="app">
+    <!-- <app-header /> -->
     <router-view />
   </div>
 </template>
+<script>
+export default {
+  components: {
+    // "app-header": () => import("./components/common/AppHeader.vue"),
+  },
+};
+</script>
 
 <style lang="scss">
-:root {
-  --text-color: #111;
-  --bg-color: #b9b3a9;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 body {
-  --text-color: #111;
-  --bg-color: #b9b3a9;
-  font-family: termina, sans-serif;
+  --text-color: #0a4aee;
+  --bg-color: #1a181b;
+  // font-family: termina, sans-serif;
   color: var(--text-color);
   background: var(--bg-color);
-  // transition: 0.3s ease-out;
+  font-family: "Krona One", sans-serif;
 }
-#app {
-  // height: 0;
-  // font-family: Avenir, Helvetica, Arial, sans-serif;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-}
-/*! locomotive-scroll v4.1.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
   overflow: hidden;
 }
@@ -56,7 +53,6 @@ html.has-scroll-dragging {
   white-space: nowrap;
   height: 100%;
 }
-
 .c-scrollbar {
   position: absolute;
   right: 0;

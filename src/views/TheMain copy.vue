@@ -8,6 +8,13 @@
         with GSAP ScrollTrigger & Locomotive Scroll
       </p>
     </section>
+    <!--     
+    <section id="about" data-scroll-section>
+      <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="2">
+        I'm a<br />Publisher<span>.</span>
+      </h1>
+    </section> -->
+
     <section data-scroll-section>
       <img
         data-scroll
@@ -58,8 +65,7 @@
 import LocomotiveScroll from "locomotive-scroll";
 export default {
   mounted() {
-    //eslint-disable-next-line
-    const scroll = new LocomotiveScroll({
+    new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
     });
@@ -77,7 +83,6 @@ section {
   padding: 50px 10vw;
   margin: auto;
   place-items: center;
-  border: 1px solid red;
 }
 
 img {
