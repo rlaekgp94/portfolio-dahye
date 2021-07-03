@@ -9,22 +9,36 @@
         </div>
       </div>
     </header>
-    <section data-scroll-section>
+    <div class="main" data-scroll-section>
       <div data-scroll>
         <h1 data-scroll data-scroll-speed="2">I'M A</h1>
         <h1 data-scroll data-scroll-speed="2" data-scroll-delay="0.2">WEB</h1>
-        <h1 data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
-          PUBLSHER<span class="red">.</span>
+        <h1
+          class="test1"
+          data-scroll
+          data-scroll-speed="2"
+          data-scroll-delay="0.2"
+        >
+          <span class="white">PUBLSHER</span>
         </h1>
+        <span
+          class="red"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="7"
+        ></span>
       </div>
-      <p data-scroll data-scroll-delay="0.2">&#169;2021 portfolio</p>
-      <!-- <div
-        class="c-header_line"
+      <p data-scroll data-scroll-delay="0.2" class="white">&#169; 2021</p>
+      <!-- <div class="c-header_line" data-scroll data-scroll-repeat></div> -->
+      <p
         data-scroll
-        data-scroll-offset="100"
-        data-scroll-repeat
-      ></div> -->
-    </section>
+        data-scroll-direction="horizontal"
+        data-scroll-speed="-3"
+        class="test2"
+      >
+        my portfolio to showcase my projects<br />.dahye
+      </p>
+    </div>
 
     <section id="test1" data-scroll-section>
       <img
@@ -123,7 +137,7 @@ header {
           height: 0.2rem;
           top: 50%;
           transform: translateY(-50%);
-          background: rgba(255, 0, 0, 0.651);
+          background: rgb(255, 0, 0);
         }
 
         &:before {
@@ -151,6 +165,36 @@ header {
     }
   }
 }
+.main {
+  min-height: 100vh;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  h1 {
+    font-size: 7rem;
+    line-height: 6.5rem;
+  }
+  .red {
+    background: linear-gradient(-45deg, #0a4aee, rgba(255, 0, 0, 0.651));
+    width: 25rem;
+    height: 25rem;
+    border-radius: 25rem;
+    position: absolute;
+    bottom: 17rem;
+    left: 40rem;
+    mix-blend-mode: difference;
+  }
+  .test2 {
+    color: #fff;
+    position: absolute;
+    right: -7rem;
+    bottom: 10rem;
+    text-align: right;
+    line-height: 1.5rem;
+  }
+}
 section {
   min-height: 100vh;
   width: 90%;
@@ -160,17 +204,13 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  h1 {
-    font-size: 7rem;
-    line-height: 6rem;
-  }
 }
 .c-header_line {
   position: absolute;
-  bottom: 10rem;
-  width: 80vw;
-  background: rgba(255, 0, 0, 0.651);
-  height: 1rem;
+  bottom: 10.5rem;
+  width: 60vw;
+  background: #fff;
+  height: 0.025rem;
   transform: scaleX(0);
   transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -192,10 +232,7 @@ h2 {
   box-sizing: border-box;
 }
 
-.red {
-  color: rgba(255, 0, 0, 0.651);
-}
 .white {
-  color: rgba(255, 255, 255, 0.774);
+  color: #fff;
 }
 </style>

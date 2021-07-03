@@ -86,7 +86,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: black;
+  background-color: #fff;
   opacity: 0.5;
   width: 7px;
   border-radius: 10px;
