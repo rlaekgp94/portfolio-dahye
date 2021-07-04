@@ -3,44 +3,75 @@
     <header>
       <div class="header-inner">
         <div class="section-anchor">
-          <a href="#test1" data-scroll-to>ABOUT</a>
-          <a href="#test2" data-scroll-to>WORKS</a>
-          <a href="#test3" data-scroll-to>CONTACT</a>
+          <a href="#about" data-scroll-to>ABOUT</a>
+          <a href="#works" data-scroll-to>WORKS</a>
+          <a href="#contact" data-scroll-to>CONTACT</a>
         </div>
       </div>
     </header>
-    <div class="main" data-scroll-section>
+
+    <section class="baaner" data-scroll-section>
       <div data-scroll>
-        <h1 data-scroll data-scroll-speed="2">I'M A</h1>
+        <h1 data-scroll data-scroll-speed="3">I'M A</h1>
         <h1 data-scroll data-scroll-speed="2" data-scroll-delay="0.2">WEB</h1>
         <h1
-          class="test1"
           data-scroll
-          data-scroll-speed="2"
-          data-scroll-delay="0.2"
+          data-scroll-speed="3"
+          data-scroll-position="top"
+          data-scroll-delay="0.05"
         >
-          <span class="white">PUBLSHER</span>
+          PUBLSHER
         </h1>
-        <span
-          class="red"
+        <div
+          class="banner-symbol"
           data-scroll
           data-scroll-direction="horizontal"
           data-scroll-speed="7"
-        ></span>
+        ></div>
       </div>
-      <p data-scroll data-scroll-delay="0.2" class="white">&#169; 2021</p>
-      <!-- <div class="c-header_line" data-scroll data-scroll-repeat></div> -->
       <p
         data-scroll
         data-scroll-direction="horizontal"
-        data-scroll-speed="-3"
-        class="test2"
+        data-scroll-speed="15"
+        class="deco-text01"
       >
-        my portfolio to showcase my projects<br />.dahye
+        &#169; 2021
       </p>
-    </div>
 
-    <section id="test1" data-scroll-section>
+      <div
+        class="deco-text02"
+        data-scroll
+        data-scroll-direction="horizontal"
+        data-scroll-speed="-10"
+      >
+        <svg viewBox="0 0 100 100" width="100" height="100">
+          <defs>
+            <path
+              id="circle"
+              d="
+        M 50, 50
+        m -37, 0
+        a 37,37 0 1,1 74,0
+        a 37,37 0 1,1 -74,0"
+            />
+          </defs>
+          <text font-size="7">
+            <textPath xlink:href="#circle">
+              Copyright © da hye kim, All rights reserved ㅡ
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <p data-scroll class="deco-text03">
+        my portfolio to showcase my projects
+      </p>
+      <p data-scroll class="deco-text04">
+        이 사이트는 개인용 포트폴리오로 제작되었습니다.
+      </p>
+    </section>
+
+    <section id="about" data-scroll-section>
       <img
         data-scroll-sticky
         src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -51,7 +82,7 @@
       </h2>
     </section>
 
-    <section id="test2" data-scroll-section>
+    <section id="works" data-scroll-section>
       <h2 data-scroll data-scroll-speed="1" class="credit">
         Made by Advantage
       </h2>
@@ -62,7 +93,7 @@
       />
     </section>
 
-    <section id="test3" data-scroll-section>
+    <section id="contact" data-scroll-section>
       <h2 data-scroll data-scroll-speed="1" class="credit">
         Made by Advantage
       </h2>
@@ -84,15 +115,37 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+$normal-color: #0a4aee;
+$accent-color: rgb(175, 0, 0);
+
+// fade-up
 @keyframes moveUp {
   from {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+// 360회전
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// 기본값
+section {
+  min-height: 100vh;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
 header {
@@ -101,7 +154,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 10;
   line-height: 10vh;
   mix-blend-mode: screen;
   animation: moveUp ease-in 0.5s;
@@ -115,8 +168,8 @@ header {
 
     .section-anchor {
       a {
-        padding: 0 0.45rem 0 0.25rem;
-        color: var(--text-color);
+        padding: 0 0.5rem 0 0.25rem;
+        color: $normal-color;
         font-size: 1.25rem;
         position: relative;
         transition: all 0.5s;
@@ -137,7 +190,7 @@ header {
           height: 0.2rem;
           top: 50%;
           transform: translateY(-50%);
-          background: rgb(255, 0, 0);
+          background: $accent-color;
         }
 
         &:before {
@@ -146,12 +199,12 @@ header {
 
         &:after {
           right: 0.2rem;
-          background: rgba(255, 0, 0, 0.651);
+          background: $accent-color;
           transition: width 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
 
         &:hover:before {
-          background: rgba(255, 0, 0, 0.651);
+          background: $accent-color;
           width: 100%;
           transition: width 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
@@ -165,58 +218,77 @@ header {
     }
   }
 }
-.main {
-  min-height: 100vh;
-  width: 90%;
-  display: flex;
-  align-items: center;
+
+.baaner {
   position: relative;
-  margin: 0 auto;
+
   h1 {
-    font-size: 7rem;
-    line-height: 6.5rem;
+    &:not(:nth-child(3)) {
+      color: $normal-color;
+    }
+
+    &:first-child {
+      margin-top: 2.5rem;
+    }
+
+    &:nth-child(3) {
+      margin-top: 2.5rem;
+    }
+
+    font-size: 10rem;
+    line-height: 8rem;
   }
-  .red {
-    background: linear-gradient(-45deg, #0a4aee, rgba(255, 0, 0, 0.651));
+
+  .banner-symbol {
+    background: linear-gradient(-45deg, $normal-color, $accent-color);
     width: 25rem;
     height: 25rem;
     border-radius: 25rem;
     position: absolute;
-    bottom: 17rem;
-    left: 40rem;
+    left: 54%;
+    bottom: 30%;
     mix-blend-mode: difference;
   }
-  .test2 {
-    color: #fff;
+
+  .deco-text01 {
     position: absolute;
-    right: -7rem;
-    bottom: 10rem;
-    text-align: right;
+    top: 37.5%;
+    right: 18.5%;
+  }
+  .deco-text02 {
+    position: absolute;
+    right: 17.25%;
+    top: 14.25%;
+    svg {
+      fill: #fff;
+      // max-width: 66vmin;
+      transform-origin: center;
+      width: 40rem;
+      height: 40rem;
+      font-family: "Syncopate", sans-serif;
+      font-weight: bold;
+      animation: rotate360 15s linear infinite;
+      transform-origin: 50% 50%;
+    }
+  }
+
+  .deco-text03 {
+    position: absolute;
+    right: 0;
+    bottom: 6rem;
     line-height: 1.5rem;
+    font-family: "Syncopate", sans-serif;
+  }
+
+  .deco-text04 {
+    position: absolute;
+    right: 0;
+    bottom: 4rem;
+    line-height: 1.5rem;
+    font-family: "Syncopate", sans-serif;
   }
 }
-section {
-  min-height: 100vh;
-  width: 90%;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  // grid-gap: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.c-header_line {
-  position: absolute;
-  bottom: 10.5rem;
-  width: 60vw;
-  background: #fff;
-  height: 0.025rem;
-  transform: scaleX(0);
-  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.c-header_line.is-inview {
-  transform: scaleX(1);
-}
+
 img {
   height: 80vh;
   width: auto;
@@ -226,13 +298,5 @@ img {
 h2 {
   font-size: 2rem;
   max-width: 400px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.white {
-  color: #fff;
 }
 </style>

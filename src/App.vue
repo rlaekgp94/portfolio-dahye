@@ -1,27 +1,21 @@
 <template>
   <div id="app">
-    <!-- <app-header /> -->
     <router-view />
   </div>
 </template>
-<script>
-export default {
-  components: {
-    // "app-header": () => import("./components/common/AppHeader.vue"),
-  },
-};
-</script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate&display=swap");
+
 body {
-  --text-color: #0a4aee;
+  --text-color: #fff;
   --bg-color: #1a181b;
-  // font-family: termina, sans-serif;
   color: var(--text-color);
   background: var(--bg-color);
   font-family: "Krona One", sans-serif;
 }
+
 html.has-scroll-smooth {
   overflow: hidden;
 }
@@ -53,6 +47,7 @@ html.has-scroll-dragging {
   white-space: nowrap;
   height: 100%;
 }
+
 .c-scrollbar {
   position: absolute;
   right: 0;
@@ -63,14 +58,17 @@ html.has-scroll-dragging {
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0;
 }
+
 .c-scrollbar:hover {
   transform: scaleX(1.45);
 }
+
 .c-scrollbar:hover,
 .has-scroll-scrolling .c-scrollbar,
 .has-scroll-dragging .c-scrollbar {
   opacity: 1;
 }
+
 [data-scroll-direction="horizontal"] .c-scrollbar {
   width: 100%;
   height: 10px;
@@ -78,6 +76,7 @@ html.has-scroll-dragging {
   bottom: 0;
   transform: scaleY(1);
 }
+
 [data-scroll-direction="horizontal"] .c-scrollbar:hover {
   transform: scaleY(1.3);
 }
@@ -94,10 +93,12 @@ html.has-scroll-dragging {
   cursor: -webkit-grab;
   cursor: grab;
 }
+
 .has-scroll-dragging .c-scrollbar_thumb {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
+
 [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
   right: auto;
   bottom: 0;

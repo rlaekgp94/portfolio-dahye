@@ -15,6 +15,8 @@
       </h1>
     </section> -->
 
+    <!-- <div class="c-header_line" data-scroll data-scroll-repeat></div> -->
+
     <section data-scroll-section>
       <img
         data-scroll
@@ -73,6 +75,18 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+// .c-header_line {
+//   position: absolute;
+//   bottom: 10.5rem;
+//   width: 60vw;
+//   background: #fff;
+//   height: 0.025rem;
+//   transform: scaleX(0);
+//   transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+// }
+// .c-header_line.is-inview {
+//   transform: scaleX(1);
+// }
 section {
   min-height: 100vh;
   width: 100%;
