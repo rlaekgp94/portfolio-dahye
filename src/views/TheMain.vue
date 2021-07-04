@@ -10,7 +10,7 @@
       </div>
     </header>
 
-    <section class="baaner" data-scroll-section>
+    <section class="banner" data-scroll-section>
       <div data-scroll>
         <h1 data-scroll data-scroll-speed="3">I'M A</h1>
         <h1 data-scroll data-scroll-speed="2" data-scroll-delay="0.2">WEB</h1>
@@ -22,65 +22,91 @@
         >
           PUBLSHER
         </h1>
+      </div>
+
+      <div data-scroll class="banner-items">
         <div
-          class="banner-symbol"
           data-scroll
+          class="banner-symbol"
           data-scroll-direction="horizontal"
           data-scroll-speed="7"
         ></div>
+
+        <div
+          class="deco-text01"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-10"
+        >
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <path
+                id="circle"
+                d="
+        M 50, 50
+        m -37, 0
+        a 37,37 0 1,1 74,0
+        a 37,37 0 1,1 -74,0"
+              />
+            </defs>
+            <text font-size="7">
+              <textPath xlink:href="#circle">
+                Copyright © da hye kim, All rights reserved ㅡ
+              </textPath>
+            </text>
+          </svg>
+        </div>
       </div>
       <p
         data-scroll
         data-scroll-direction="horizontal"
         data-scroll-speed="15"
-        class="deco-text01"
+        class="deco-text02"
       >
         &#169; 2021
       </p>
 
-      <div
-        class="deco-text02"
+      <p
         data-scroll
-        data-scroll-direction="horizontal"
-        data-scroll-speed="-10"
+        class="deco-text03"
+        data-scroll-speed="2"
+        data-scroll-delay="0.05"
       >
-        <svg viewBox="0 0 100 100" width="100" height="100">
-          <defs>
-            <path
-              id="circle"
-              d="
-        M 50, 50
-        m -37, 0
-        a 37,37 0 1,1 74,0
-        a 37,37 0 1,1 -74,0"
-            />
-          </defs>
-          <text font-size="7">
-            <textPath xlink:href="#circle">
-              Copyright © da hye kim, All rights reserved ㅡ
-            </textPath>
-          </text>
-        </svg>
-      </div>
-
-      <p data-scroll class="deco-text03">
         my portfolio to showcase my projects
       </p>
-      <p data-scroll class="deco-text04">
-        이 사이트는 개인용 포트폴리오로 제작되었습니다.
+      <p
+        data-scroll
+        class="deco-text04"
+        data-scroll-speed="2"
+        data-scroll-delay="0.05"
+      >
+        이 사이트는 개인용 포트폴리오 목적으로 제작되었습니다.
       </p>
     </section>
 
-    <section id="about" data-scroll-section>
-      <img
-        data-scroll-sticky
-        src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-        alt=""
-      />
-      <h2 data-scroll data-scroll-speed="1" class="credit">
-        Made by Advantage
-      </h2>
-    </section>
+    <div id="about" data-scroll-section>
+      <section>
+        <img
+          data-scroll-sticky
+          src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt=""
+        />
+        <h2 data-scroll data-scroll-speed="1" class="credit">
+          Made by Advantage
+        </h2>
+      </section>
+
+      <section>
+        <img
+          data-scroll-sticky
+          src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt=""
+        />
+        <h2 data-scroll data-scroll-speed="1" class="credit">
+          Made by Advantage
+        </h2>
+      </section>
+    </div>
 
     <section id="works" data-scroll-section>
       <h2 data-scroll data-scroll-speed="1" class="credit">
@@ -143,7 +169,6 @@ section {
   min-height: 100vh;
   width: 90vw;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
@@ -156,7 +181,6 @@ header {
   left: 0;
   z-index: 10;
   line-height: 10vh;
-  mix-blend-mode: screen;
   animation: moveUp ease-in 0.5s;
 
   .header-inner {
@@ -219,7 +243,7 @@ header {
   }
 }
 
-.baaner {
+.banner {
   position: relative;
 
   h1 {
@@ -239,54 +263,68 @@ header {
     line-height: 8rem;
   }
 
-  .banner-symbol {
-    background: linear-gradient(-45deg, $normal-color, $accent-color);
-    width: 25rem;
-    height: 25rem;
-    border-radius: 25rem;
-    position: absolute;
-    left: 54%;
-    bottom: 30%;
-    mix-blend-mode: difference;
+  .banner-items {
+    position: relative;
+    bottom: 0;
+    right: 25%;
+    width: 50rem;
+    height: 50rem;
+    margin-top: 5rem;
+
+    .banner-symbol {
+      position: absolute;
+      top: 7.5rem;
+      left: 11.75rem;
+      background: linear-gradient(-45deg, $normal-color, $accent-color);
+      width: 25rem;
+      height: 25rem;
+      border-radius: 25rem;
+      mix-blend-mode: difference;
+    }
+
+    .deco-text01 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      svg {
+        fill: #fff;
+        width: 40rem;
+        height: 40rem;
+        font-family: "Syncopate", sans-serif;
+        font-weight: bold;
+        animation: rotate360 15s linear infinite;
+      }
+    }
   }
 
-  .deco-text01 {
+  .deco-text02 {
     position: absolute;
     top: 37.5%;
     right: 18.5%;
-  }
-  .deco-text02 {
-    position: absolute;
-    right: 17.25%;
-    top: 14.25%;
-    svg {
-      fill: #fff;
-      // max-width: 66vmin;
-      transform-origin: center;
-      width: 40rem;
-      height: 40rem;
-      font-family: "Syncopate", sans-serif;
-      font-weight: bold;
-      animation: rotate360 15s linear infinite;
-      transform-origin: 50% 50%;
-    }
+    opacity: 0.7;
   }
 
   .deco-text03 {
     position: absolute;
     right: 0;
-    bottom: 6rem;
+    bottom: 10rem;
     line-height: 1.5rem;
     font-family: "Syncopate", sans-serif;
+    opacity: 0.7;
   }
 
   .deco-text04 {
     position: absolute;
     right: 0;
-    bottom: 4rem;
+    bottom: 8rem;
     line-height: 1.5rem;
     font-family: "Syncopate", sans-serif;
   }
+}
+
+// About section
+#about {
+  justify-content: center;
 }
 
 img {
