@@ -1,5 +1,5 @@
 <template>
-  <div data-scroll-container>
+  <div id="Main" data-scroll-container>
     <header>
       <div class="section-anchor">
         <a href="#about" data-scroll-to>ABOUT</a>
@@ -289,6 +289,12 @@
 
     <section class="works" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
+        <router-link
+          to="/works-Marshall"
+          class="works-image works-section_image02"
+          data-scroll
+        ></router-link>
+
         <div class="works-section-title" data-scroll>
           <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.05">
             <span data-scroll>02</span>Marshall
@@ -297,12 +303,6 @@
             Renewal Project | Web
           </h3>
         </div>
-
-        <router-link
-          to="/works-Marshall"
-          class="works-image works-section_image02"
-          data-scroll
-        ></router-link>
       </div>
     </section>
 
@@ -327,20 +327,20 @@
 
     <section class="works" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
-        <div class="works-section-title" data-scroll>
-          <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.05">
-            <span data-scroll>04</span>LAFTEL
-          </h2>
-          <h3 data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
-            Clone Project &#38; Responsive
-          </h3>
-        </div>
-
         <router-link
           to="/works-Laftel"
           class="works-image works-section_image04"
           data-scroll
         ></router-link>
+
+        <div class="works-section-title" data-scroll>
+          <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.05">
+            <span data-scroll>04</span>Laftel
+          </h2>
+          <h3 data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
+            Clone Project &#38; Responsive
+          </h3>
+        </div>
       </div>
     </section>
     <!-- works -->
@@ -804,10 +804,6 @@ header {
   }
 }
 
-// #works {
-//   padding-top: 5rem;
-// }
-
 .works-title {
   margin-top: 10rem;
   height: 10rem;
@@ -821,28 +817,56 @@ header {
 }
 
 // Works section
+
 .works {
-  justify-content: center;
-  align-items: center;
+  position: relative;
+
+  &:nth-child(odd) {
+    .works-image {
+      left: 0;
+    }
+  }
+
+  &:nth-child(even) {
+    .works-image {
+      right: 0;
+    }
+  }
 
   .works-inner {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+
+    .works-image {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 40vw;
+      height: 60vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      filter: grayscale(60%);
+    }
   }
 
   .works-section-title {
+    position: absolute;
+    // z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
 
     h2 {
       padding-left: 3rem;
-      font-size: 4.5rem;
+      font-size: 5rem;
       position: relative;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
       span {
         position: absolute;
         top: 0;
@@ -856,27 +880,16 @@ header {
     }
   }
 
-  .works-image {
-    width: 52.5vw;
-    height: 80vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    filter: grayscale(60%);
-  }
-
   .works-section_image01 {
     background-image: url("../assets/image/works/works-image_01.jpg");
   }
   .works-section_image02 {
-    background-position: 30%;
     background-image: url("../assets/image/works/works-image_02.jpg");
   }
   .works-section_image03 {
     background-image: url("https://www.samhwa.com/files/editor/upload/1621919214975_11.png");
   }
   .works-section_image04 {
-    background-position: 85%;
     background-image: url("https://image.laftel.net/carousel/carousel_hero_bocchan_w.jpg?Expires=1625565328&Signature=m8kh71vaoOl9hS76QlisqzjwfkkNPZAmM~oShU8mwx7rRCGuwxofPhqLtrvZkcp4goZATFZUkgZxPXacMnBPWlCR~6DKyqXhpuMdubM2xf9bzD01sd-qvMobtVd5dCY9jrm0nq7zUdj7xr2euVSwhGMFu1MPJRPzDu2Yjj4cdSrjXWJu5RjvSeXKtdSFx1Jv~La3wyFqWcGeCmo7kVTiN3H5wVfAM72buqfALyBBJ2Fjx1B1nnb8tZw539JbG0zZ08YLujKYspM0SMtHV0noXimPQmwOl7pOY3nrBSWdQ311~uWmsg2qYqtHmRE2ZbRgb6Mm3sgR9SbyYbqr8HqU8A__&Key-Pair-Id=APKAJMMAKL567BYWKQ5A");
   }
 }
