@@ -354,9 +354,28 @@
     <!-- works -->
 
     <section id="contact" data-scroll-section>
-      <h2 data-scroll data-scroll-speed="1" class="credit">
-        Made by Advantage
+      <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="15">
+        CONTACT
       </h2>
+
+      <form data-scroll class="contact-form" @submit.prevent="sendEmail">
+        <div class="user-info">
+          <div>
+            <label>Name</label>
+            <input type="text" name="user_name" />
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="user_email" />
+          </div>
+        </div>
+
+        <div class="message-wrap">
+          <label>Message</label>
+          <textarea name="message"></textarea>
+          <input type="submit" value="Send" />
+        </div>
+      </form>
     </section>
     <!-- contact -->
   </div>
@@ -365,6 +384,7 @@
 <script>
 import $ from "jquery";
 import LocomotiveScroll from "locomotive-scroll";
+import emailjs from "emailjs-com";
 export default {
   mounted() {
     new LocomotiveScroll({
@@ -390,12 +410,32 @@ export default {
       document.execCommand("Copy");
       alert("이메일주소가 복사되었습니다.");
     },
+
+    // Contact
+    sendEmail: (e) => {
+      emailjs
+        .sendForm(
+          "service_j74oskd",
+          "template_0p8u0re",
+          e.target,
+          "user_dorbJpVbU55goBZYnr3rQ"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.status, result.text);
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
+    },
   },
 };
 </script>
 <style lang="scss" scoped>
 $normal-color: #0a4aee;
 $accent-color: rgb(175, 0, 0);
+
 // fade-up
 @keyframes moveUp {
   from {
@@ -407,12 +447,14 @@ $accent-color: rgb(175, 0, 0);
     transform: translateY(0px);
   }
 }
+
 // 360회전
 @keyframes rotate360 {
   100% {
     transform: rotate(360deg);
   }
 }
+
 // 기본값
 section {
   width: 90vw;
@@ -844,6 +886,50 @@ header {
   .works-section_image04 {
     background-position: 85%;
     background-image: url("https://image.laftel.net/carousel/carousel_hero_bocchan_w.jpg?Expires=1625565328&Signature=m8kh71vaoOl9hS76QlisqzjwfkkNPZAmM~oShU8mwx7rRCGuwxofPhqLtrvZkcp4goZATFZUkgZxPXacMnBPWlCR~6DKyqXhpuMdubM2xf9bzD01sd-qvMobtVd5dCY9jrm0nq7zUdj7xr2euVSwhGMFu1MPJRPzDu2Yjj4cdSrjXWJu5RjvSeXKtdSFx1Jv~La3wyFqWcGeCmo7kVTiN3H5wVfAM72buqfALyBBJ2Fjx1B1nnb8tZw539JbG0zZ08YLujKYspM0SMtHV0noXimPQmwOl7pOY3nrBSWdQ311~uWmsg2qYqtHmRE2ZbRgb6Mm3sgR9SbyYbqr8HqU8A__&Key-Pair-Id=APKAJMMAKL567BYWKQ5A");
+  }
+}
+
+// Contact section
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .contact-form {
+    width: 40vw;
+    height: 50vh;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .user-info {
+      border: 1px solid blue;
+      width: 100%;
+      height: 40%;
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .message-wrap {
+      border: 1px solid blue;
+      width: 100%;
+      height: 40%;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 </style>

@@ -49,14 +49,7 @@ html.has-scroll-dragging {
 }
 
 .c-scrollbar {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 11px;
-  height: 100%;
-  transform-origin: center right;
-  transition: transform 0.3s, opacity 0.3s;
-  opacity: 0;
+  display: none;
 }
 
 .c-scrollbar:hover {
