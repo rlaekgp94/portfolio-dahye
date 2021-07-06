@@ -274,8 +274,6 @@
           to="/works-Printbakery"
           class="works-image works-section_image01"
           data-scroll
-          data-scroll-speed="3"
-          data-scroll-delay="0.05"
         ></router-link>
 
         <div class="works-section-title" data-scroll>
@@ -304,8 +302,6 @@
           to="/works-Marshall"
           class="works-image works-section_image02"
           data-scroll
-          data-scroll-speed="3"
-          data-scroll-delay="0.05"
         ></router-link>
       </div>
     </section>
@@ -316,8 +312,6 @@
           to="/works-Samhwa"
           class="works-image works-section_image03"
           data-scroll
-          data-scroll-speed="3"
-          data-scroll-delay="0.05"
         ></router-link>
 
         <div class="works-section-title" data-scroll>
@@ -346,34 +340,30 @@
           to="/works-Laftel"
           class="works-image works-section_image04"
           data-scroll
-          data-scroll-speed="3"
-          data-scroll-delay="0.05"
         ></router-link>
       </div>
     </section>
     <!-- works -->
 
     <section id="contact" data-scroll-section>
-      <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="15">
-        CONTACT
-      </h2>
+      <h2 data-scroll>Contact Us</h2>
 
       <form data-scroll class="contact-form" @submit.prevent="sendEmail">
         <div class="user-info">
           <div>
-            <label>Name</label>
-            <input type="text" name="user_name" />
+            <label>NAME</label>
+            <input type="text" name="user_name" autocomplete="off" />
           </div>
           <div>
-            <label>Email</label>
-            <input type="email" name="user_email" />
+            <label>EMAIL</label>
+            <input type="email" name="user_email" autocomplete="off" />
           </div>
         </div>
 
         <div class="message-wrap">
-          <label>Message</label>
+          <label>MESSAGE</label>
           <textarea name="message"></textarea>
-          <input type="submit" value="Send" />
+          <input class="submit-btn" type="submit" value="SEND" />
         </div>
       </form>
     </section>
@@ -412,7 +402,7 @@ export default {
     },
 
     // Contact
-    sendEmail: (e) => {
+    sendEmail: e => {
       emailjs
         .sendForm(
           "service_j74oskd",
@@ -421,11 +411,13 @@ export default {
           "user_dorbJpVbU55goBZYnr3rQ"
         )
         .then(
-          (result) => {
+          result => {
             console.log("SUCCESS!", result.status, result.text);
+            alert("메세지가 발송되었습니다.");
           },
-          (error) => {
+          error => {
             console.log("FAILED...", error);
+            alert("메세지 발송에 실패했습니다.");
           }
         );
     },
@@ -866,7 +858,7 @@ header {
 
   .works-image {
     width: 52.5vw;
-    height: 100vh;
+    height: 80vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -891,44 +883,97 @@ header {
 
 // Contact section
 #contact {
+  margin-top: 15rem;
+  padding-bottom: 10rem;
+  min-height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  justify-content: space-between;
   h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    font-size: 4.5rem;
+    line-height: 6rem;
+    align-self: flex-start;
   }
 
   .contact-form {
+    align-self: center;
+    font-family: "Syncopate", sans-serif;
+    color: #fff;
     width: 40vw;
-    height: 50vh;
-    border: 1px solid red;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    input,
+    textarea {
+      color: #fff;
+      font-size: 1.25rem;
+      letter-spacing: 0.25rem;
+      background: none;
+      outline: none;
+      border: none;
+    }
+
+    label {
+      font-size: 1.5rem;
+    }
+
     .user-info {
-      border: 1px solid blue;
       width: 100%;
-      height: 40%;
+      height: 30%;
       display: flex;
       justify-content: space-between;
+      margin-bottom: 3rem;
+
+      input {
+        height: 5rem;
+        border-bottom: 1px solid #fff;
+      }
 
       div {
-        width: 40%;
+        width: 45%;
         display: flex;
         flex-direction: column;
       }
     }
 
     .message-wrap {
-      border: 1px solid blue;
       width: 100%;
-      height: 40%;
+      height: 60%;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
+
+      label {
+        margin-bottom: 1.5rem;
+      }
+
+      textarea {
+        font-family: "Arial", sans-serif;
+        width: 100%;
+        height: 10rem;
+        resize: none;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 3rem;
+      }
+
+      .submit-btn {
+        cursor: pointer;
+        width: 45%;
+        height: 4rem;
+        color: #000;
+        font-size: 1.25rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        align-self: flex-end;
+        background: #fff;
+        transition: all 0.5s;
+
+        &:hover {
+          background: $accent-color;
+          color: #fff;
+        }
+      }
     }
   }
 }

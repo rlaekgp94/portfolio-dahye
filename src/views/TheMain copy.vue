@@ -813,6 +813,7 @@ h6 {
     transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
   font-size: 0;
 }
+
 .o-title.is-inview .o-title_line {
   transform: none;
   opacity: 1;
