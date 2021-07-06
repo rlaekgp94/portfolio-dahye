@@ -96,14 +96,18 @@
         </button>
       </div>
 
-      <h2
-        data-scroll
-        class="about-title"
-        data-scroll-speed="2"
-        data-scroll-delay="0.075"
-      >
-        ABOUT <span>.</span>
-      </h2>
+      <div class="about-title" data-scroll>
+        <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
+          ABOUT
+        </h2>
+        <span
+          class="about-title01"
+          data-scroll
+          data-scroll-speed="4"
+          data-scroll-delay="0.075"
+          >.</span
+        >
+      </div>
 
       <div
         class="header_line"
@@ -126,7 +130,10 @@
           <ul class="about-skills-inner" data-scroll>
             <li data-scroll>
               <div class="about-skill-more-btn">
-                <span>01</span> Ul Development
+                <span data-scroll>01</span>
+                <p class="delay01" data-scroll data-scroll-delay="0.15">
+                  Ul Development
+                </p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -138,11 +145,20 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
+
+              <div
+                class="skill_line delay01"
+                data-scroll
+                data-scroll-delay="0.15"
+              ></div>
             </li>
 
             <li data-scroll>
               <div class="about-skill-more-btn">
-                <span>02</span> Markup & design
+                <span>02</span>
+                <p class="delay02" data-scroll data-scroll-delay="0.15">
+                  Markup & design
+                </p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -154,11 +170,20 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
+
+              <div
+                class="skill_line delay02"
+                data-scroll
+                data-scroll-delay="0.15"
+              ></div>
             </li>
 
             <li data-scroll>
               <div class="about-skill-more-btn">
-                <span>03</span> co-work
+                <span>03</span>
+                <p class="delay03" data-scroll data-scroll-delay="0.15">
+                  co-work
+                </p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -170,11 +195,20 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
+
+              <div
+                class="skill_line delay03"
+                data-scroll
+                data-scroll-delay="0.15"
+              ></div>
             </li>
 
             <li data-scroll>
               <div class="about-skill-more-btn">
-                <span>04</span> Skills
+                <span>04</span>
+                <p class="delay04" data-scroll data-scroll-delay="0.15">
+                  Skills
+                </p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -186,11 +220,20 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
+
+              <div
+                class="skill_line delay04"
+                data-scroll
+                data-scroll-delay="0.15"
+              ></div>
             </li>
 
             <li data-scroll>
               <div class="about-skill-more-btn">
-                <span>05</span> For Users
+                <span>05</span>
+                <p class="delay05" data-scroll data-scroll-delay="0.15">
+                  For Users
+                </p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -202,6 +245,12 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
+
+              <div
+                class="skill_line delay05"
+                data-scroll
+                data-scroll-delay="0.15"
+              ></div>
             </li>
           </ul>
         </div>
@@ -272,10 +321,8 @@ export default {
       smartphone: { smooth: true },
       tablet: { smooth: true },
     });
-
     // About Skill Accordion Slide
     const skill_btn = $(".about-skill-more-btn");
-
     skill_btn.click(function () {
       $(".about-skill-more")
         .not($(this).next(".about-skill-more").slideToggle(500))
@@ -297,27 +344,23 @@ export default {
 <style lang="scss" scoped>
 $normal-color: #0a4aee;
 $accent-color: rgb(175, 0, 0);
-
 // fade-up
 @keyframes moveUp {
   from {
     opacity: 0;
     transform: translateY(10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0px);
   }
 }
-
 // 360회전
 @keyframes rotate360 {
   100% {
     transform: rotate(360deg);
   }
 }
-
 // 기본값
 section {
   width: 90vw;
@@ -325,7 +368,6 @@ section {
   display: flex;
   margin: 0 auto;
 }
-
 header {
   position: fixed;
   top: 5vh;
@@ -334,7 +376,6 @@ header {
   animation: moveUp ease-in 0.5s;
   display: flex;
   align-items: center;
-
   .section-anchor {
     a {
       padding: 0 0.5rem 0 0.25rem;
@@ -342,15 +383,12 @@ header {
       font-size: 1.25rem;
       position: relative;
       transition: all 0.5s;
-
       &:not(:last-child) {
         margin-right: 2.5rem;
       }
-
       &:hover {
         color: #fff;
       }
-
       &:before,
       &:after {
         content: "";
@@ -361,23 +399,19 @@ header {
         transform: translateY(-50%);
         background: $accent-color;
       }
-
       &:before {
         left: -0.2rem;
       }
-
       &:after {
         right: 0.2rem;
         background: $accent-color;
         transition: width 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
       }
-
       &:hover:before {
         background: $accent-color;
         width: 100%;
         transition: width 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
       }
-
       &:hover:after {
         background: transparent;
         width: 100%;
@@ -386,28 +420,22 @@ header {
     }
   }
 }
-
 .banner {
   position: relative;
   align-items: center;
-
   h1 {
     &:not(:nth-child(3)) {
       color: $normal-color;
     }
-
     &:first-child {
       margin-top: 2.5rem;
     }
-
     &:nth-child(3) {
       margin-top: 2.5rem;
     }
-
     font-size: 10rem;
     line-height: 8rem;
   }
-
   .banner-items {
     position: relative;
     bottom: 0;
@@ -415,7 +443,6 @@ header {
     width: 50rem;
     height: 50rem;
     margin-top: 5rem;
-
     .banner-symbol {
       position: absolute;
       top: 7.5rem;
@@ -426,7 +453,6 @@ header {
       border-radius: 25rem;
       mix-blend-mode: difference;
     }
-
     .deco-text01 {
       position: absolute;
       top: 0;
@@ -441,13 +467,11 @@ header {
       }
     }
   }
-
   .deco-text02 {
     position: absolute;
     top: 37.5%;
     right: 18.5%;
   }
-
   .deco-text03 {
     position: absolute;
     right: 0;
@@ -456,7 +480,6 @@ header {
     font-family: "Syncopate", sans-serif;
     opacity: 0.8;
   }
-
   .deco-text04 {
     position: absolute;
     right: 0;
@@ -466,7 +489,6 @@ header {
     opacity: 0.7;
   }
 }
-
 // About section
 #about {
   // justify-content: space-between;
@@ -474,7 +496,6 @@ header {
   min-height: auto;
   padding-top: 5rem;
   padding-bottom: 10rem;
-
   .about-link {
     a {
       color: #fff;
@@ -486,7 +507,6 @@ header {
         padding-bottom: 0.2rem;
       }
     }
-
     button {
       color: #fff;
       font-family: "Krona One", sans-serif;
@@ -507,28 +527,31 @@ header {
         height: 1.15rem;
       }
     }
-
     #copyEmail {
       position: absolute;
       top: 0;
       left: -999rem;
     }
   }
-
   .about-title {
+    width: auto;
     font-size: 6rem;
     margin-top: 12.5rem;
+    position: relative;
+  }
 
-    span {
-      color: $accent-color;
-    }
+  .about-title01 {
+    color: $accent-color;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 30rem;
   }
 
   .header_line {
     margin-top: 3rem;
     margin-bottom: 3rem;
     width: 90vw;
-    background: rgba(255, 255, 255, 0.788);
+    background: rgba(255, 255, 255, 0.5);
     height: 0.025rem;
     transform: scaleX(0);
     transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -536,24 +559,19 @@ header {
   .header_line.is-inview {
     transform: scaleX(1);
   }
-
   .about-inner {
     display: flex;
     justify-content: space-between;
-
     .about-info {
       line-height: 1.75rem;
     }
-
     .about-skills {
       width: 45vw;
-
       .about-skills-inner {
         font-size: 3rem;
         margin-top: -2rem;
-
         li {
-          border-bottom: 1px solid #fff;
+          // border-bottom: 1px solid #fff;
           height: auto;
           line-height: 7rem;
           transition: all 0.5s;
@@ -591,30 +609,88 @@ header {
             padding-top: 2rem;
             padding-bottom: 4rem;
           }
+
+          p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+          }
+
+          p.is-inview {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+
+          p.is-inview.delay01 {
+            transition-delay: 0.25s;
+          }
+
+          p.is-inview.delay02 {
+            transition-delay: 0.3s;
+          }
+
+          p.is-inview.delay03 {
+            transition-delay: 0.35s;
+          }
+
+          p.is-inview.delay04 {
+            transition-delay: 0.4s;
+          }
+
+          p.is-inview.delay05 {
+            transition-delay: 0.45s;
+          }
+
+          .skill_line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            background: rgba(255, 255, 255, 0.5);
+            height: 0.025rem;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+          }
+          .skill_line.is-inview {
+            width: 100%;
+            opacity: 1;
+          }
+
+          .skill_line.is-inview.delay01 {
+            transition-delay: 0.5s;
+          }
+          .skill_line.is-inview.delay02 {
+            transition-delay: 0.55s;
+          }
+          .skill_line.is-inview.delay03 {
+            transition-delay: 0.6s;
+          }
+          .skill_line.is-inview.delay04 {
+            transition-delay: 0.65s;
+          }
+          .skill_line.is-inview.delay05 {
+            transition-delay: 0.7s;
+          }
         }
       }
     }
   }
 }
-
 .works-title {
   height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
-
   h2 {
     font-size: 2.5rem;
     font-weight: bold;
   }
 }
-
 // Works section
 .works {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid red;
-
   img {
     height: 70vh;
     width: auto;
@@ -624,7 +700,6 @@ header {
     cursor: pointer;
   }
 }
-
 // h2 {
 //   font-size: 2rem;
 //   max-width: 400px;
