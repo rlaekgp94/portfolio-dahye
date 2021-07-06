@@ -9,16 +9,20 @@
     </header>
 
     <section class="banner" data-scroll-section>
-      <div data-scroll>
-        <h1 data-scroll data-scroll-speed="3">I'M A</h1>
-        <h1 data-scroll data-scroll-speed="2" data-scroll-delay="0.2">WEB</h1>
+      <div class="banner-title" data-scroll>
+        <h1 data-scroll data-scroll-speed="3">
+          <div>I'M A</div>
+        </h1>
+        <h1 data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
+          <div>WEB</div>
+        </h1>
         <h1
           data-scroll
           data-scroll-speed="3"
           data-scroll-position="top"
           data-scroll-delay="0.05"
         >
-          PUBLSHER
+          <div>PUBLSHER</div>
         </h1>
       </div>
 
@@ -101,7 +105,7 @@
           ABOUT
         </h2>
         <span
-          class="about-title01"
+          class="about-title-item"
           data-scroll
           data-scroll-speed="4"
           data-scroll-delay="0.075"
@@ -117,7 +121,7 @@
       ></div>
 
       <div class="about-inner" data-scroll>
-        <p class="about-info" data-scroll data-scroll-speed="2">
+        <p class="about-info" data-scroll>
           안녕하세요, 웹 퍼블리셔 김다혜입니다.<br />
           <br />
           언제나 사용자의 관점에서 생각하며<br />
@@ -126,7 +130,7 @@
           컴포넌트 단위의 유지보수에 최적화된 마크업에 관심이 많습니다.
         </p>
 
-        <div class="about-skills" data-scroll data-scroll-speed="2">
+        <div class="about-skills" data-scroll>
           <ul class="about-skills-inner" data-scroll>
             <li data-scroll>
               <div class="about-skill-more-btn">
@@ -420,21 +424,61 @@ header {
     }
   }
 }
+
 .banner {
   position: relative;
   align-items: center;
-  h1 {
-    &:not(:nth-child(3)) {
-      color: $normal-color;
+
+  .banner-title.is-inview {
+    h1 {
+      div {
+        transform: none;
+        opacity: 1;
+      }
+      &:first-child {
+        div {
+          transition-delay: 0.3s;
+        }
+      }
+
+      &:nth-child(2) {
+        div {
+          transition-delay: 0.4s;
+        }
+      }
+
+      &:nth-child(3) {
+        div {
+          transition-delay: 0.5s;
+        }
+      }
     }
-    &:first-child {
-      margin-top: 2.5rem;
+  }
+
+  .banner-title {
+    h1 {
+      perspective: 600px;
+      -webkit-perspective: 600px;
+      div {
+        opacity: 0;
+        transform-origin: center top;
+        transform-style: preserve-3d;
+        transform: translateY(100%) rotateX(-80deg);
+        transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+
+      &:not(:nth-child(3)) {
+        color: $normal-color;
+      }
+      &:first-child {
+        margin-top: 2.5rem;
+      }
+      &:nth-child(3) {
+        margin-top: 2.5rem;
+      }
+      font-size: 10rem;
+      line-height: 8rem;
     }
-    &:nth-child(3) {
-      margin-top: 2.5rem;
-    }
-    font-size: 10rem;
-    line-height: 8rem;
   }
   .banner-items {
     position: relative;
@@ -489,13 +533,14 @@ header {
     opacity: 0.7;
   }
 }
+
 // About section
 #about {
-  // justify-content: space-between;
   flex-direction: column;
   min-height: auto;
   padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
+
   .about-link {
     a {
       color: #fff;
@@ -533,22 +578,23 @@ header {
       left: -999rem;
     }
   }
+
   .about-title {
     width: auto;
-    font-size: 6rem;
-    margin-top: 12.5rem;
+    font-size: 5rem;
+    margin-top: 10rem;
     position: relative;
   }
 
-  .about-title01 {
+  .about-title-item {
     color: $accent-color;
     position: absolute;
     bottom: -1.5rem;
-    left: 30rem;
+    left: 25rem;
   }
 
   .header_line {
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-bottom: 3rem;
     width: 90vw;
     background: rgba(255, 255, 255, 0.5);
@@ -568,12 +614,11 @@ header {
     .about-skills {
       width: 45vw;
       .about-skills-inner {
-        font-size: 3rem;
+        font-size: 2rem;
         margin-top: -2rem;
         li {
-          // border-bottom: 1px solid #fff;
           height: auto;
-          line-height: 7rem;
+          line-height: 6rem;
           transition: all 0.5s;
           position: relative;
           padding: 0 3rem;
@@ -589,15 +634,15 @@ header {
 
           span {
             position: absolute;
-            top: -0.75rem;
+            top: -0.4rem;
             left: 0;
             font-size: 1rem;
           }
 
           img {
             filter: invert(100%);
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1rem;
+            height: 1rem;
           }
 
           .about-skill-more {
