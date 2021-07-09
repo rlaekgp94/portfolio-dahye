@@ -346,7 +346,13 @@
     <!-- works -->
 
     <section id="contact" data-scroll-section>
-      <h2 data-scroll>Contact Us</h2>
+      <div class="contact-title" data-scroll>
+        <h2 data-scroll data-scroll-speed="2">Contact Us</h2>
+        <h3 data-scroll data-scroll-speed="2" data-scroll-delay="0.05">
+          Thanks for visiting my Website.<br />
+          Copyright ⓒ 2021. Dahye Kim All rights reserved.
+        </h3>
+      </div>
 
       <form data-scroll class="contact-form" @submit.prevent="sendEmail">
         <div class="user-info">
@@ -901,12 +907,18 @@ header {
   min-height: auto;
   display: flex;
   justify-content: space-between;
-  h2 {
-    font-size: 4.5rem;
-    line-height: 6rem;
+  .contact-title {
     align-self: flex-start;
-  }
 
+    h2 {
+      font-size: 5rem;
+      margin-bottom: 17.5rem;
+    }
+    h3 {
+      line-height: 2rem;
+      font-weight: 300;
+    }
+  }
   .contact-form {
     align-self: center;
     font-family: "Syncopate", sans-serif;
@@ -974,17 +986,19 @@ header {
         cursor: pointer;
         width: 45%;
         height: 4rem;
-        color: #000;
+        color: #fff;
         font-size: 1.25rem;
         font-weight: bold;
         letter-spacing: 0;
         align-self: flex-end;
-        background: #fff;
+        background-color: transparent;
+        border: 1px solid #fff;
+
         transition: all 0.5s;
 
         &:hover {
-          background: $accent-color;
-          color: #fff;
+          background: #fff;
+          color: #000;
         }
       }
     }
