@@ -25,40 +25,43 @@
           <div>PUBLSHER</div>
         </h1>
       </div>
+      <div class="banner-items-wrap">
+        <div data-scroll class="banner-items">
+          <div data-scroll class="banner-symbol-wrap">
+            <div
+              data-scroll
+              class="banner-symbol"
+              data-scroll-direction="horizontal"
+              data-scroll-speed="7"
+              data-scroll-position="top"
+            ></div>
+          </div>
 
-      <div data-scroll class="banner-items">
-        <div data-scroll class="banner-symbol-wrap">
           <div
+            class="deco-text01"
             data-scroll
-            class="banner-symbol"
             data-scroll-direction="horizontal"
-            data-scroll-speed="7"
-          ></div>
-        </div>
-
-        <div
-          class="deco-text01"
-          data-scroll
-          data-scroll-direction="horizontal"
-          data-scroll-speed="-10"
-        >
-          <svg viewBox="0 0 100 100">
-            <defs>
-              <path
-                id="circle"
-                d="
+            data-scroll-speed="-10"
+            data-scroll-position="top"
+          >
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <path
+                  id="circle"
+                  d="
         M 50, 50
         m -37, 0
         a 37,37 0 1,1 74,0
         a 37,37 0 1,1 -74,0"
-              />
-            </defs>
-            <text font-size="7">
-              <textPath xlink:href="#circle">
-                Copyright © da hye kim, All rights reserved ㅡ
-              </textPath>
-            </text>
-          </svg>
+                />
+              </defs>
+              <text font-size="7">
+                <textPath xlink:href="#circle">
+                  Copyright © da hye kim, All rights reserved ㅡ
+                </textPath>
+              </text>
+            </svg>
+          </div>
         </div>
       </div>
       <p
@@ -680,24 +683,22 @@ header {
       line-height: 8rem;
     }
   }
+
+  .banner-items-wrap {
+    position: absolute;
+    bottom: 17.5%;
+    right: 15%;
+  }
   .banner-items {
     position: relative;
-    bottom: 0;
-    right: 20%;
     width: 40rem;
     height: 40rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     .banner-symbol-wrap {
+      width: 40rem;
+      height: 40rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 40rem;
-      height: 40rem;
-      position: absolute;
-      top: 0;
-      left: 0;
     }
     .banner-symbol {
       background: linear-gradient(-45deg, $normal-color, $accent-color);
@@ -707,6 +708,9 @@ header {
       mix-blend-mode: difference;
     }
     .deco-text01 {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 40rem;
       height: 40rem;
       svg {
@@ -1174,5 +1178,16 @@ header {
       }
     }
   }
+}
+
+// tablet
+@media all and (max-width: 1024px) {
+  section {
+    border: 1px solid red;
+  }
+}
+
+//mobile
+@media screen and (max-width: 768px) {
 }
 </style>
