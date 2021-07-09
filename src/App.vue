@@ -1,8 +1,25 @@
 <template>
-  <div id="app">
+  <div id="app" data-scroll-container>
     <router-view />
   </div>
 </template>
+<script>
+import LocomotiveScroll from "locomotive-scroll";
+export default {
+  mounted() {
+    new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+      smartphone: { smooth: true },
+      tablet: { smooth: true },
+    });
+
+    window.addEventListener("resize", function () {
+      scroll.update();
+    });
+  },
+};
+</script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
@@ -50,6 +67,14 @@ html.has-scroll-dragging {
 
 .c-scrollbar {
   display: none;
+  // position: absolute;
+  // right: 0;
+  // top: 0;
+  // width: 11px;
+  // height: 100%;
+  // transform-origin: center right;
+  // transition: transform 0.3s, opacity 0.3s;
+  // opacity: 0;
 }
 
 .c-scrollbar:hover {

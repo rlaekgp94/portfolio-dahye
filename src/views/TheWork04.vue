@@ -121,8 +121,8 @@ header {
 
   .prev-link-btn {
     left: -1.5rem;
-    top: 50%;
-    transform: translateY(-50%) rotate(90deg);
+    top: 50vh;
+    transform: rotate(90deg);
   }
 }
 

@@ -486,8 +486,8 @@
 
 <script>
 import $ from "jquery";
-import LocomotiveScroll from "locomotive-scroll";
 import emailjs from "emailjs-com";
+import LocomotiveScroll from "locomotive-scroll";
 export default {
   mounted() {
     new LocomotiveScroll({
@@ -496,6 +496,11 @@ export default {
       smartphone: { smooth: true },
       tablet: { smooth: true },
     });
+
+    window.addEventListener("resize", function () {
+      scroll.update();
+    });
+
     // About Skill Accordion Slide
     const skill_btn = $(".about-skill-more-btn");
     skill_btn.click(function () {

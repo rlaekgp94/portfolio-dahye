@@ -51,6 +51,10 @@ export default {
       smartphone: { smooth: true },
       tablet: { smooth: true },
     });
+
+    window.addEventListener("resize", function () {
+      scroll.update();
+    });
   },
 };
 </script>
@@ -113,8 +117,8 @@ header {
 
   .next-link-btn {
     right: -1.5rem;
-    top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
+    top: 50vh;
+    transform: rotate(-90deg);
   }
 }
 
