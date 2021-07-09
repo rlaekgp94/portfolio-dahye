@@ -280,9 +280,10 @@
             Renewal Project &#38; Responsive
           </h3>
         </div>
+
         <router-link
           to="/works-Printbakery"
-          class="works-link-btn-wrap"
+          class="works-link-btn-wrap works-link-btn-right"
           data-scroll
           data-scroll-direction="horizontal"
           data-scroll-speed="-4"
@@ -313,11 +314,7 @@
 
     <section class="works" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
-        <router-link
-          to="/works-Marshall"
-          class="works-image works-section_image02"
-          data-scroll
-        ></router-link>
+        <div class="works-image works-section_image02" data-scroll></div>
 
         <div class="works-section-title" data-scroll>
           <h2 data-scroll data-scroll-speed="2">
@@ -325,16 +322,41 @@
           </h2>
           <h3 data-scroll data-scroll-speed="2">Renewal Project | Web</h3>
         </div>
+
+        <router-link
+          to="/works-Marshall"
+          class="works-link-btn-wrap works-link-btn-left"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="4"
+        >
+          <div class="works-link-btn" data-scroll>
+            <p>Click</p>
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <path
+                  id="circle"
+                  d="
+        M 50, 50
+        m -37, 0
+        a 37,37 0 1,1 74,0
+        a 37,37 0 1,1 -74,0"
+                />
+              </defs>
+              <text font-size="6">
+                <textPath xlink:href="#circle">
+                  view more view more view more view more view more
+                </textPath>
+              </text>
+            </svg>
+          </div>
+        </router-link>
       </div>
     </section>
 
     <section class="works" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
-        <router-link
-          to="/works-Samhwa"
-          class="works-image works-section_image03"
-          data-scroll
-        ></router-link>
+        <div class="works-image works-section_image03" data-scroll></div>
 
         <div class="works-section-title" data-scroll>
           <h2 data-scroll data-scroll-speed="2">
@@ -342,16 +364,41 @@
           </h2>
           <h3 data-scroll data-scroll-speed="2">Clone Project | Web</h3>
         </div>
+
+        <router-link
+          to="/works-Samhwa"
+          class="works-link-btn-wrap works-link-btn-right"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-4"
+        >
+          <div class="works-link-btn" data-scroll>
+            <img src="@/assets/image/icons/left-arrow.svg" alt="클릭 버튼" />
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <path
+                  id="circle"
+                  d="
+        M 50, 50
+        m -37, 0
+        a 37,37 0 1,1 74,0
+        a 37,37 0 1,1 -74,0"
+                />
+              </defs>
+              <text font-size="6">
+                <textPath xlink:href="#circle">
+                  view more view more view more view more view more
+                </textPath>
+              </text>
+            </svg>
+          </div>
+        </router-link>
       </div>
     </section>
 
     <section class="works" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
-        <router-link
-          to="/works-Laftel"
-          class="works-image works-section_image04"
-          data-scroll
-        ></router-link>
+        <div class="works-image works-section_image04" data-scroll></div>
 
         <div class="works-section-title" data-scroll>
           <h2 data-scroll data-scroll-speed="2">
@@ -361,6 +408,34 @@
             Clone Project &#38; Responsive
           </h3>
         </div>
+        <router-link
+          to="/works-Laftel"
+          class="works-link-btn-wrap works-link-btn-left"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="4"
+        >
+          <div class="works-link-btn" data-scroll>
+            <p>Click</p>
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <path
+                  id="circle"
+                  d="
+        M 50, 50
+        m -37, 0
+        a 37,37 0 1,1 74,0
+        a 37,37 0 1,1 -74,0"
+                />
+              </defs>
+              <text font-size="6">
+                <textPath xlink:href="#circle">
+                  view more view more view more view more view more
+                </textPath>
+              </text>
+            </svg>
+          </div>
+        </router-link>
       </div>
     </section>
     <!-- works -->
@@ -416,8 +491,8 @@ export default {
     new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
-      smartphone: { smooth: true },
-      tablet: { smooth: true },
+      // smartphone: { smooth: true },
+      // tablet: { smooth: true },
     });
     // About Skill Accordion Slide
     const skill_btn = $(".about-skill-more-btn");
@@ -655,9 +730,8 @@ header {
 // About section
 #about {
   flex-direction: column;
-  min-height: auto;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  margin-bottom: 10rem;
 
   .about-link {
     a {
@@ -841,8 +915,8 @@ header {
 }
 
 .works-title {
-  margin-top: 10rem;
   height: 10rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -885,21 +959,38 @@ header {
       width: 40vw;
       height: 60vh;
       background-repeat: no-repeat;
-      background-position: center;
       background-size: cover;
       filter: grayscale(60%);
     }
 
+    .works-link-btn-right {
+      bottom: 10%;
+      right: 0;
+    }
+
+    .works-link-btn-left {
+      bottom: 10%;
+      left: 0;
+    }
+
     .works-link-btn-wrap {
       position: absolute;
-      bottom: 17.5%;
-      right: 0;
       width: 20rem;
       height: 20rem;
+      color: #fff;
+
       .works-link-btn {
         position: relative;
         width: 100%;
         height: 100%;
+
+        p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 1.5rem;
+        }
         img {
           position: absolute;
           top: 50%;
@@ -950,29 +1041,29 @@ header {
   }
 
   .works-section_image01 {
+    background-position: center;
     background-image: url("../assets/image/works/works-image_01.jpg");
   }
   .works-section_image02 {
+    background-position: 40%;
     background-image: url("../assets/image/works/works-image_02.jpg");
   }
   .works-section_image03 {
+    background-position: right;
     background-image: url("https://www.samhwa.com/files/editor/upload/1621919214975_11.png");
   }
   .works-section_image04 {
+    background-position: 85%;
     background-image: url("https://image.laftel.net/carousel/carousel_hero_bocchan_w.jpg?Expires=1625565328&Signature=m8kh71vaoOl9hS76QlisqzjwfkkNPZAmM~oShU8mwx7rRCGuwxofPhqLtrvZkcp4goZATFZUkgZxPXacMnBPWlCR~6DKyqXhpuMdubM2xf9bzD01sd-qvMobtVd5dCY9jrm0nq7zUdj7xr2euVSwhGMFu1MPJRPzDu2Yjj4cdSrjXWJu5RjvSeXKtdSFx1Jv~La3wyFqWcGeCmo7kVTiN3H5wVfAM72buqfALyBBJ2Fjx1B1nnb8tZw539JbG0zZ08YLujKYspM0SMtHV0noXimPQmwOl7pOY3nrBSWdQ311~uWmsg2qYqtHmRE2ZbRgb6Mm3sgR9SbyYbqr8HqU8A__&Key-Pair-Id=APKAJMMAKL567BYWKQ5A");
   }
 }
 
 // Contact section
 #contact {
-  margin-top: 15rem;
-  padding-bottom: 10rem;
-  min-height: auto;
+  align-items: center;
   display: flex;
   justify-content: space-between;
   .contact-title {
-    align-self: flex-start;
-
     h2 {
       font-size: 5rem;
       margin-bottom: 14.5rem;
@@ -983,7 +1074,6 @@ header {
     }
   }
   .contact-form {
-    align-self: center;
     font-family: "Syncopate", sans-serif;
     color: #fff;
     width: 40vw;
