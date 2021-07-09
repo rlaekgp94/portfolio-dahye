@@ -270,20 +270,44 @@
 
     <section id="works" class="works" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
-        <router-link
-          to="/works-Printbakery"
-          class="works-image works-section_image01"
-          data-scroll
-        ></router-link>
+        <div class="works-image works-section_image01" data-scroll></div>
 
         <div class="works-section-title" data-scroll>
-          <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.05">
+          <h2 data-scroll data-scroll-speed="2">
             <span data-scroll>01</span>Printbakery
           </h2>
-          <h3 data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
+          <h3 data-scroll data-scroll-speed="2">
             Renewal Project &#38; Responsive
           </h3>
         </div>
+        <router-link
+          to="/works-Printbakery"
+          class="works-link-btn-wrap"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-4"
+        >
+          <div class="works-link-btn" data-scroll>
+            <img src="@/assets/image/icons/left-arrow.svg" alt="클릭 버튼" />
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <path
+                  id="circle"
+                  d="
+        M 50, 50
+        m -37, 0
+        a 37,37 0 1,1 74,0
+        a 37,37 0 1,1 -74,0"
+                />
+              </defs>
+              <text font-size="6">
+                <textPath xlink:href="#circle">
+                  view more view more view more view more view more
+                </textPath>
+              </text>
+            </svg>
+          </div>
+        </router-link>
       </div>
     </section>
 
@@ -296,12 +320,10 @@
         ></router-link>
 
         <div class="works-section-title" data-scroll>
-          <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.05">
+          <h2 data-scroll data-scroll-speed="2">
             <span data-scroll>02</span>Marshall
           </h2>
-          <h3 data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
-            Renewal Project | Web
-          </h3>
+          <h3 data-scroll data-scroll-speed="2">Renewal Project | Web</h3>
         </div>
       </div>
     </section>
@@ -315,12 +337,10 @@
         ></router-link>
 
         <div class="works-section-title" data-scroll>
-          <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.05">
+          <h2 data-scroll data-scroll-speed="2">
             <span data-scroll>03</span>Samhwa
           </h2>
-          <h3 data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
-            Clone Project | Web
-          </h3>
+          <h3 data-scroll data-scroll-speed="2">Clone Project | Web</h3>
         </div>
       </div>
     </section>
@@ -334,10 +354,10 @@
         ></router-link>
 
         <div class="works-section-title" data-scroll>
-          <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.05">
+          <h2 data-scroll data-scroll-speed="2">
             <span data-scroll>04</span>Laftel
           </h2>
-          <h3 data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
+          <h3 data-scroll data-scroll-speed="2">
             Clone Project &#38; Responsive
           </h3>
         </div>
@@ -348,28 +368,38 @@
     <section id="contact" data-scroll-section>
       <div class="contact-title" data-scroll>
         <h2 data-scroll data-scroll-speed="2">Contact Us</h2>
-        <h3 data-scroll data-scroll-speed="2" data-scroll-delay="0.05">
+        <h3 data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
           Thanks for visiting my Website.<br />
           Copyright ⓒ 2021. Dahye Kim All rights reserved.
         </h3>
       </div>
 
       <form data-scroll class="contact-form" @submit.prevent="sendEmail">
-        <div class="user-info">
-          <div>
-            <label>NAME</label>
-            <input type="text" name="user_name" autocomplete="off" />
+        <div data-scroll class="user-info">
+          <div data-scroll>
+            <label data-scroll>NAME</label>
+            <input
+              data-scroll
+              type="text"
+              name="user_name"
+              autocomplete="off"
+            />
           </div>
-          <div>
-            <label>EMAIL</label>
-            <input type="email" name="user_email" autocomplete="off" />
+          <div data-scroll>
+            <label data-scroll>EMAIL</label>
+            <input
+              data-scroll
+              type="email"
+              name="user_email"
+              autocomplete="off"
+            />
           </div>
         </div>
 
-        <div class="message-wrap">
-          <label>MESSAGE</label>
-          <textarea name="message"></textarea>
-          <input class="submit-btn" type="submit" value="SEND" />
+        <div data-scroll class="message-wrap">
+          <label data-scroll>MESSAGE</label>
+          <textarea name="message" data-scroll></textarea>
+          <input data-scroll class="submit-btn" type="submit" value="SEND" />
         </div>
       </form>
     </section>
@@ -823,8 +853,11 @@ header {
 }
 
 // Works section
-
+#works {
+  padding-top: 7.5rem;
+}
 .works {
+  min-height: 80vh;
   position: relative;
 
   &:nth-child(odd) {
@@ -855,6 +888,36 @@ header {
       background-position: center;
       background-size: cover;
       filter: grayscale(60%);
+    }
+
+    .works-link-btn-wrap {
+      position: absolute;
+      bottom: 17.5%;
+      right: 0;
+      width: 20rem;
+      height: 20rem;
+      .works-link-btn {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scaleX(-1);
+          width: 4rem;
+          height: 4rem;
+          filter: invert(100%);
+        }
+        svg {
+          fill: #fff;
+          width: 100%;
+          height: 100%;
+          font-family: "Syncopate", sans-serif;
+          font-weight: bold;
+          animation: rotate360 15s linear infinite;
+        }
+      }
     }
   }
 
@@ -912,7 +975,7 @@ header {
 
     h2 {
       font-size: 5rem;
-      margin-bottom: 17.5rem;
+      margin-bottom: 14.5rem;
     }
     h3 {
       line-height: 2rem;

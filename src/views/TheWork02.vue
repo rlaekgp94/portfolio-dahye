@@ -79,22 +79,21 @@ header {
   top: 5vh;
   left: 5vw;
   z-index: 10;
-  animation: moveUp ease-in 0.5s;
   a {
-    color: $normal-color;
+    color: #fff;
     font-size: 1.25rem;
     display: flex;
     align-items: center;
     &:hover {
-      color: #fff;
+      color: $normal-color;
       img {
-        filter: invert(100%);
+        filter: invert(21%) sepia(92%) saturate(3685%) hue-rotate(224deg)
+          brightness(92%) contrast(108%);
       }
     }
     img {
       margin-right: 1rem;
-      filter: invert(21%) sepia(92%) saturate(3685%) hue-rotate(224deg)
-        brightness(92%) contrast(108%);
+      filter: invert(100%);
       width: 2rem;
       height: 2rem;
     }
@@ -146,6 +145,7 @@ section {
 
   img {
     width: 30rem;
+    animation: moveUp ease-in 0.5s;
   }
 }
 </style>
