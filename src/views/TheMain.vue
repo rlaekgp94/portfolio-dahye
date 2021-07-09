@@ -27,12 +27,14 @@
       </div>
 
       <div data-scroll class="banner-items">
-        <div
-          data-scroll
-          class="banner-symbol"
-          data-scroll-direction="horizontal"
-          data-scroll-speed="7"
-        ></div>
+        <div data-scroll class="banner-symbol-wrap">
+          <div
+            data-scroll
+            class="banner-symbol"
+            data-scroll-direction="horizontal"
+            data-scroll-speed="7"
+          ></div>
+        </div>
 
         <div
           class="deco-text01"
@@ -491,8 +493,8 @@ export default {
     new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
-      // smartphone: { smooth: true },
-      // tablet: { smooth: true },
+      smartphone: { smooth: true },
+      tablet: { smooth: true },
     });
     // About Skill Accordion Slide
     const skill_btn = $(".about-skill-more-btn");
@@ -676,14 +678,23 @@ header {
   .banner-items {
     position: relative;
     bottom: 0;
-    right: 25%;
-    width: 50rem;
-    height: 50rem;
-    margin-top: 5rem;
-    .banner-symbol {
+    right: 20%;
+    width: 40rem;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner-symbol-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40rem;
+      height: 40rem;
       position: absolute;
-      top: 7.5rem;
-      left: 11.75rem;
+      top: 0;
+      left: 0;
+    }
+    .banner-symbol {
       background: linear-gradient(-45deg, $normal-color, $accent-color);
       width: 25rem;
       height: 25rem;
@@ -691,13 +702,12 @@ header {
       mix-blend-mode: difference;
     }
     .deco-text01 {
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 40rem;
+      height: 40rem;
       svg {
         fill: #fff;
-        width: 40rem;
-        height: 40rem;
+        width: 100%;
+        height: 100%;
         font-family: "Syncopate", sans-serif;
         font-weight: bold;
         animation: rotate360 15s linear infinite;
@@ -706,7 +716,7 @@ header {
   }
   .deco-text02 {
     position: absolute;
-    top: 37.5%;
+    top: 40%;
     right: 18.5%;
   }
   .deco-text03 {
@@ -1064,9 +1074,12 @@ header {
   display: flex;
   justify-content: space-between;
   .contact-title {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     h2 {
       font-size: 5rem;
-      margin-bottom: 14.5rem;
     }
     h3 {
       line-height: 2rem;
