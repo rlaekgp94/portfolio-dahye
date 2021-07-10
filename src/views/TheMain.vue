@@ -130,7 +130,7 @@
           안녕하세요, 웹 퍼블리셔 김다혜입니다.<br />
           <br />
           언제나 사용자의 관점에서 생각하며<br />
-          열정적으로 소통하는 웹 퍼블리셔가 되고싶습니다.<br />
+          열정적으로 소통하는 웹 퍼블리셔가 되고싶습니다.
           <br />
           컴포넌트 단위의 유지보수에 최적화된 마크업에 관심이 많습니다.
         </p>
@@ -1182,12 +1182,292 @@ header {
 
 // tablet
 @media all and (max-width: 1024px) {
-  section {
-    border: 1px solid red;
+  // Tablet banner
+  .banner {
+    .banner-title {
+      h1 {
+        &:first-child {
+          margin-top: 1.5rem;
+        }
+        &:nth-child(3) {
+          margin-top: 1.5rem;
+        }
+        font-size: 7rem;
+        line-height: 6rem;
+      }
+    }
+
+    .banner-items-wrap {
+      bottom: 25%;
+      right: 0;
+    }
+    .banner-items {
+      width: 25rem;
+      height: 25rem;
+      .banner-symbol-wrap {
+        width: 100%;
+        height: 100%;
+      }
+      .banner-symbol {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 15rem;
+      }
+      .deco-text01 {
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+    .deco-text02 {
+      top: 47.5%;
+      right: 5%;
+    }
+  }
+
+  // Tablet About section
+  #about {
+    padding-top: 0;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+
+    .about-link {
+      a {
+        margin-right: 5rem;
+      }
+    }
+
+    .about-title {
+      font-size: 3.5rem;
+    }
+
+    .about-title-item {
+      bottom: -1.6rem;
+      left: 17.5rem;
+    }
+
+    .about-inner {
+      .about-info {
+        display: none;
+      }
+      .about-skills {
+        width: 100%;
+      }
+    }
+  }
+
+  // Tablet Works section
+  .works {
+    .works-inner {
+      .works-image {
+        width: 90vw;
+      }
+
+      .works-link-btn-right {
+        bottom: 15%;
+      }
+
+      .works-link-btn-left {
+        bottom: 15%;
+      }
+
+      .works-link-btn-wrap {
+        width: 12.5rem;
+        height: 12.5rem;
+
+        .works-link-btn {
+          p {
+            font-size: 1rem;
+          }
+          img {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+        }
+      }
+    }
+
+    .works-section-title {
+      h2 {
+        text-shadow: 2px 2px 10px rgba(61, 61, 61, 0.651);
+        padding-left: 2rem;
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        span {
+          top: -0.5;
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  // Tablet Contact section
+  #contact {
+    justify-content: center;
+    flex-direction: column;
+    .contact-title {
+      padding-top: 6.5rem;
+      margin-bottom: 2rem;
+      height: auto;
+      display: block;
+      h2 {
+        font-size: 4rem;
+      }
+      h3 {
+        display: none;
+      }
+    }
+    .contact-form {
+      width: 50vw;
+    }
   }
 }
 
-//mobile
+// mobile
 @media screen and (max-width: 768px) {
+  section {
+    // border: 1px solid green;
+  }
+
+  // Mobile header
+  header {
+    .section-anchor {
+      a {
+        font-size: 1rem;
+        &:not(:last-child) {
+          margin-right: 1.25rem;
+        }
+      }
+    }
+  }
+
+  // Mobile banner
+  .banner {
+    .banner-title {
+      h1 {
+        &:nth-child(2) {
+          margin-top: 0.75rem;
+        }
+        font-size: 3rem;
+        line-height: 2.25rem;
+      }
+    }
+
+    .banner-items-wrap {
+      top: 35%;
+      right: -5%;
+    }
+    .banner-items {
+      width: 15rem;
+      height: 15rem;
+      .banner-symbol-wrap {
+        width: 100%;
+        height: 100%;
+      }
+      .banner-symbol {
+        width: 8.75rem;
+        height: 8.75rem;
+        border-radius: 8.75rem;
+      }
+      .deco-text01 {
+        width: 15rem;
+        height: 15rem;
+      }
+    }
+
+    .deco-text02 {
+      font-size: 0.75rem;
+      top: 50%;
+      right: -23.75%;
+    }
+
+    .deco-text03 {
+      font-size: 0.75rem;
+      bottom: 8.5rem;
+      line-height: 1.25rem;
+    }
+    .deco-text04 {
+      font-size: 0.75rem;
+      bottom: 7.5rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  // Tablet About section
+  #about {
+    padding-top: 0;
+    margin-bottom: 5rem;
+
+    .about-link {
+      a {
+        margin-right: 2.5rem;
+        font-size: 0.75rem;
+      }
+      button {
+        font-size: 0.75rem;
+        img {
+          width: 0.75rem;
+          height: 0.75rem;
+        }
+      }
+    }
+
+    .about-title {
+      font-size: 2rem;
+      margin-top: 4.5rem;
+    }
+
+    .about-title-item {
+      left: 10.5rem;
+    }
+
+    .header_line {
+      margin-top: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-inner {
+      .about-skills {
+        width: 100%;
+        .about-skills-inner {
+          font-size: 1.25rem;
+          li {
+            line-height: 4.5rem;
+            padding: 0 2rem;
+
+            span {
+              position: absolute;
+              top: -0.4rem;
+              left: 0;
+              font-size: 0.5em;
+            }
+
+            img {
+              width: 0.75rem;
+              height: 0.75rem;
+            }
+
+            .about-skill-more {
+              width: 100%;
+              height: auto;
+              padding-top: 1rem;
+              padding-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 여기까지함
+  // about li들 아코디언 슬라이드업할때 버그 수정할것
+  .works-title {
+    height: 10rem;
+    width: 100%;
+    text-align: center;
+    h2 {
+      font-size: 2rem;
+    }
+  }
 }
 </style>
