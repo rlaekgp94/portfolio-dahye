@@ -390,7 +390,62 @@
     <!-- web / tablet -->
 
     <section id="works" class="works" data-scroll-section>
-      <div class="works-inner" data-scroll data-scroll-speed="2">
+      <div class="m-works-inner mobile" data-scroll>
+        <router-link
+          to="/works-Printbakery"
+          class="m-works-image m-works-section_image01"
+          data-scroll
+        >
+          <div data-scroll class="m-works-section-title">
+            <span data-scroll>01</span>
+            <h2 data-scroll>Printbakery</h2>
+          </div>
+
+          <button>MORE</button>
+        </router-link>
+
+        <router-link
+          to="/works-Marshall"
+          class="m-works-image m-works-section_image02"
+          data-scroll
+        >
+          <div data-scroll class="m-works-section-title">
+            <span data-scroll>02</span>
+            <h2 data-scroll>Marshall</h2>
+          </div>
+
+          <button>MORE</button>
+        </router-link>
+
+        <router-link
+          to="/works-Samhwa"
+          class="m-works-image m-works-section_image03"
+          data-scroll
+        >
+          <div data-scroll class="m-works-section-title">
+            <span data-scroll>03</span>
+            <h2 data-scroll>Samhwa</h2>
+          </div>
+
+          <button>MORE</button>
+        </router-link>
+
+        <router-link
+          to="/works-Laftel"
+          class="m-works-image m-works-section_image04"
+          data-scroll
+        >
+          <div data-scroll class="m-works-section-title">
+            <span data-scroll>04</span>
+            <h2 data-scroll>Laftel</h2>
+          </div>
+
+          <button>MORE</button>
+        </router-link>
+      </div>
+      <!-- mobile -->
+
+      <div class="works-inner web" data-scroll data-scroll-speed="2">
         <div class="works-image works-section_image01" data-scroll></div>
 
         <div class="works-section-title" data-scroll>
@@ -431,9 +486,10 @@
           </div>
         </router-link>
       </div>
+      <!-- web / tablet -->
     </section>
 
-    <section class="works" data-scroll-section>
+    <section class="works web" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
         <div class="works-image works-section_image02" data-scroll></div>
 
@@ -475,7 +531,7 @@
       </div>
     </section>
 
-    <section class="works" data-scroll-section>
+    <section class="works web" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
         <div class="works-image works-section_image03" data-scroll></div>
 
@@ -517,7 +573,7 @@
       </div>
     </section>
 
-    <section class="works" data-scroll-section>
+    <section class="works web" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
         <div class="works-image works-section_image04" data-scroll></div>
 
@@ -617,6 +673,7 @@ export default {
       smartphone: { smooth: true },
       tablet: { smooth: true },
     });
+
     window.addEventListener("resize", function () {
       scroll.update();
     });
@@ -723,6 +780,10 @@ section {
   .mobile {
     display: none;
   }
+}
+
+.mobile {
+  display: none;
 }
 
 header {
@@ -1123,13 +1184,13 @@ header {
 .works {
   min-height: 80vh;
   position: relative;
-  &:nth-child(odd) {
+  &:nth-child(even) {
     .works-image {
       left: 0;
     }
   }
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     .works-image {
       right: 0;
     }
@@ -1509,7 +1570,7 @@ header {
 // mobile
 @media screen and (max-width: 768px) {
   section {
-    // border: 1px solid green;
+    border: 1px solid yellow;
     .web {
       display: none;
     }
@@ -1517,6 +1578,13 @@ header {
     .mobile {
       display: inline;
     }
+  }
+
+  .web {
+    display: none;
+  }
+  .mobile {
+    display: inline;
   }
 
   // Mobile header
@@ -1707,7 +1775,7 @@ header {
         height: 100%;
         background: #fff;
         color: #000;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1753,10 +1821,117 @@ header {
     align-items: center;
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
       line-height: 3rem;
     }
+  }
+
+  // Mobile Works
+
+  #works {
+    padding-top: 0;
+  }
+
+  .works {
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .m-works-inner {
+    width: 100%;
+    height: 80vh;
+    display: block;
+  }
+
+  .m-works-image {
+    width: 100%;
+    height: 17.5vh;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(60%);
+    border-radius: 1.25rem;
+    color: #fff;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    button {
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      width: 5rem;
+      height: 1.5rem;
+      border-radius: 2rem;
+    }
+  }
+
+  .m-works-section-title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      font-family: "ELAND_Choice_M", sans-serif;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .m-works-section_image01 {
+    background-position: center;
+    background-image: linear-gradient(
+        to right,
+        rgba(29, 29, 29, 0.8),
+        rgba(170, 170, 170, 0.4)
+      ),
+      url("../assets/image/works/works-image_01.jpg");
+  }
+
+  .m-works-section_image02 {
+    background-position: 40%;
+    background-image: linear-gradient(
+        to right,
+        rgba(29, 29, 29, 0.8),
+        rgba(170, 170, 170, 0.4)
+      ),
+      url("../assets/image/works/works-image_02.jpg");
+  }
+
+  .m-works-section_image03 {
+    background-position: right;
+    background-image: linear-gradient(
+        to right,
+        rgba(29, 29, 29, 0.8),
+        rgba(170, 170, 170, 0.4)
+      ),
+      url("https://www.samhwa.com/files/editor/upload/1621919214975_11.png");
+  }
+
+  .m-works-section_image04 {
+    background-position: 85%;
+    background-image: linear-gradient(
+        to right,
+        rgba(29, 29, 29, 0.8),
+        rgba(170, 170, 170, 0.4)
+      ),
+      url("https://image.laftel.net/carousel/carousel_hero_bocchan_w.jpg?Expires=1625565328&Signature=m8kh71vaoOl9hS76QlisqzjwfkkNPZAmM~oShU8mwx7rRCGuwxofPhqLtrvZkcp4goZATFZUkgZxPXacMnBPWlCR~6DKyqXhpuMdubM2xf9bzD01sd-qvMobtVd5dCY9jrm0nq7zUdj7xr2euVSwhGMFu1MPJRPzDu2Yjj4cdSrjXWJu5RjvSeXKtdSFx1Jv~La3wyFqWcGeCmo7kVTiN3H5wVfAM72buqfALyBBJ2Fjx1B1nnb8tZw539JbG0zZ08YLujKYspM0SMtHV0noXimPQmwOl7pOY3nrBSWdQ311~uWmsg2qYqtHmRE2ZbRgb6Mm3sgR9SbyYbqr8HqU8A__&Key-Pair-Id=APKAJMMAKL567BYWKQ5A");
   }
 }
 </style>

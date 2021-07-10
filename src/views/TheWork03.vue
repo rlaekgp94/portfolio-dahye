@@ -59,6 +59,10 @@ export default {
       smartphone: { smooth: true },
       tablet: { smooth: true },
     });
+
+    window.addEventListener("resize", function () {
+      scroll.update();
+    });
   },
 };
 </script>
