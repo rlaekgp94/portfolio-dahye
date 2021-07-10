@@ -9,7 +9,15 @@
     </header>
 
     <section class="banner" data-scroll-section>
-      <div class="banner-title" data-scroll>
+      <div class="m-banner-title mobile" data-scroll>
+        <h1 data-scroll><div>I'M</div></h1>
+        <h1 data-scroll><div>A</div></h1>
+        <h1 data-scrol><div>WEB</div></h1>
+        <h1 data-scroll><div>PUBLSHER.</div></h1>
+      </div>
+      <!-- mobile -->
+
+      <div class="banner-title web" data-scroll>
         <h1 data-scroll data-scroll-speed="3">
           <div>I'M A</div>
         </h1>
@@ -25,6 +33,8 @@
           <div>PUBLSHER</div>
         </h1>
       </div>
+      <!-- web/tablet -->
+
       <div class="banner-items-wrap">
         <div data-scroll class="banner-items">
           <div data-scroll class="banner-symbol-wrap">
@@ -38,7 +48,33 @@
           </div>
 
           <div
-            class="deco-text01"
+            class="m-deco-text01 mobile"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="-10"
+          >
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <path
+                  id="circle"
+                  d="
+        M 50, 50
+        m -37, 0
+        a 37,37 0 1,1 74,0
+        a 37,37 0 1,1 -74,0"
+                />
+              </defs>
+              <text font-size="7">
+                <textPath xlink:href="#circle">
+                  Copyright © da hye kim, All rights reserved ㅡ
+                </textPath>
+              </text>
+            </svg>
+          </div>
+          <!-- mobile -->
+
+          <div
+            class="deco-text01 web"
             data-scroll
             data-scroll-direction="horizontal"
             data-scroll-speed="-10"
@@ -62,6 +98,7 @@
               </text>
             </svg>
           </div>
+          <!-- web / tablet -->
         </div>
       </div>
       <p
@@ -105,7 +142,7 @@
         </button>
       </div>
 
-      <div class="about-title" data-scroll>
+      <div class="about-title web" data-scroll>
         <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
           ABOUT
         </h2>
@@ -117,15 +154,85 @@
           >.</span
         >
       </div>
+      <!-- web / tablet -->
 
       <div
-        class="header_line"
+        class="header_line web"
         data-scroll
         data-scroll-repeat
         data-scroll-delay="0.15"
       ></div>
+      <!-- web / tablet -->
 
-      <div class="about-inner" data-scroll>
+      <div data-scroll class="m-about-inner mobile">
+        <p class="m-about-info" data-scroll>
+          안녕하세요, 웹 퍼블리셔 김다혜입니다.<br /><br />
+          언제나 사용자의 관점에서 생각하며 열정적으로 소통하는 웹 퍼블리셔가
+          되고싶습니다. 컴포넌트 단위의 유지보수에 최적화된 마크업에 관심이
+          많습니다.
+        </p>
+
+        <div data-scroll>
+          <div data-scroll class="swiper-container">
+            <div data-scroll class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-skill-box">
+                  <strong>Ul Development</strong>
+                  <p>
+                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
+                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
+                    탄탄한 업무 프로세스를 지향합니다.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-skill-box">
+                  <strong>Markup&design</strong>
+                  <p>
+                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
+                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
+                    탄탄한 업무 프로세스를 지향합니다.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-skill-box">
+                  <strong>co-work</strong>
+                  <p>
+                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
+                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
+                    탄탄한 업무 프로세스를 지향합니다.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-skill-box">
+                  <strong>Skills</strong>
+                  <p>
+                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
+                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
+                    탄탄한 업무 프로세스를 지향합니다.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-skill-box">
+                  <strong>For Users</strong>
+                  <p>
+                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
+                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
+                    탄탄한 업무 프로세스를 지향합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <!-- mobile -->
+
+      <div class="about-inner web" data-scroll>
         <p class="about-info" data-scroll>
           안녕하세요, 웹 퍼블리셔 김다혜입니다.<br />
           <br />
@@ -264,14 +371,23 @@
           </ul>
         </div>
       </div>
+      <!-- web / tablet -->
     </section>
     <!-- about -->
+
+    <div class="m-works-title" data-scroll-section>
+      <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="12">
+        Do you want to<br />see my project?
+      </h2>
+    </div>
+    <!-- mobile -->
 
     <div class="works-title" data-scroll-section>
       <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="12">
         Do you want to see my project?
       </h2>
     </div>
+    <!-- web / tablet -->
 
     <section id="works" class="works" data-scroll-section>
       <div class="works-inner" data-scroll data-scroll-speed="2">
@@ -491,6 +607,8 @@
 import $ from "jquery";
 import emailjs from "emailjs-com";
 import LocomotiveScroll from "locomotive-scroll";
+import Swiper from "swiper/bundle";
+import "swiper/swiper-bundle.css";
 export default {
   mounted() {
     new LocomotiveScroll({
@@ -499,7 +617,6 @@ export default {
       smartphone: { smooth: true },
       tablet: { smooth: true },
     });
-
     window.addEventListener("resize", function () {
       scroll.update();
     });
@@ -511,6 +628,35 @@ export default {
         .not($(this).next(".about-skill-more").slideToggle(500))
         .slideUp();
     });
+
+    // About Mobile Skills slide
+    new Swiper(".swiper-container", {
+      spaceBetween: 25,
+      paginationType: "custom",
+      loop: false,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1.25,
+          slidesPerGroup: 1,
+        },
+        480: {
+          slidesPerView: 1.25,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 1.5,
+          slidesPerGroup: 1,
+        },
+      },
+    });
   },
   methods: {
     // About Email Copy
@@ -521,7 +667,6 @@ export default {
       document.execCommand("Copy");
       alert("이메일주소가 복사되었습니다.");
     },
-
     // Contact
     sendEmail: e => {
       emailjs
@@ -574,7 +719,12 @@ section {
   min-height: 100vh;
   display: flex;
   margin: 0 auto;
+
+  .mobile {
+    display: none;
+  }
 }
+
 header {
   position: fixed;
   top: 5vh;
@@ -583,6 +733,7 @@ header {
   animation: moveUp ease-in 0.5s;
   display: flex;
   align-items: center;
+
   .section-anchor {
     a {
       padding: 0 0.5rem 0 0.25rem;
@@ -590,12 +741,15 @@ header {
       font-size: 1.25rem;
       position: relative;
       transition: all 0.5s;
+
       &:not(:last-child) {
         margin-right: 2.5rem;
       }
+
       &:hover {
         color: #fff;
       }
+
       &:before,
       &:after {
         content: "";
@@ -627,7 +781,6 @@ header {
     }
   }
 }
-
 .banner {
   position: relative;
   align-items: center;
@@ -638,18 +791,17 @@ header {
         transform: none;
         opacity: 1;
       }
+
       &:first-child {
         div {
           transition-delay: 0.3s;
         }
       }
-
       &:nth-child(2) {
         div {
           transition-delay: 0.4s;
         }
       }
-
       &:nth-child(3) {
         div {
           transition-delay: 0.5s;
@@ -662,6 +814,7 @@ header {
     h1 {
       perspective: 600px;
       -webkit-perspective: 600px;
+
       div {
         opacity: 0;
         transform-origin: center top;
@@ -669,7 +822,6 @@ header {
         transform: translateY(100%) rotateX(-80deg);
         transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
-
       &:not(:nth-child(3)) {
         color: $normal-color;
       }
@@ -689,10 +841,12 @@ header {
     bottom: 17.5%;
     right: 15%;
   }
+
   .banner-items {
     position: relative;
     width: 40rem;
     height: 40rem;
+
     .banner-symbol-wrap {
       width: 40rem;
       height: 40rem;
@@ -700,6 +854,7 @@ header {
       justify-content: center;
       align-items: center;
     }
+
     .banner-symbol {
       background: linear-gradient(-45deg, $normal-color, $accent-color);
       width: 25rem;
@@ -707,12 +862,14 @@ header {
       border-radius: 25rem;
       mix-blend-mode: difference;
     }
+
     .deco-text01 {
       position: absolute;
       top: 0;
       left: 0;
       width: 40rem;
       height: 40rem;
+
       svg {
         fill: #fff;
         width: 100%;
@@ -723,11 +880,13 @@ header {
       }
     }
   }
+
   .deco-text02 {
     position: absolute;
     top: 40%;
     right: 18.5%;
   }
+
   .deco-text03 {
     position: absolute;
     right: 0;
@@ -736,6 +895,7 @@ header {
     font-family: "Syncopate", sans-serif;
     opacity: 0.8;
   }
+
   .deco-text04 {
     position: absolute;
     right: 0;
@@ -758,11 +918,13 @@ header {
       font-weight: bold;
       transition: all 0.5s;
       margin-right: 10rem;
+
       span {
         border-bottom: 0.125rem solid #fff;
         padding-bottom: 0.2rem;
       }
     }
+
     button {
       color: #fff;
       font-family: "Krona One", sans-serif;
@@ -772,17 +934,20 @@ header {
       cursor: pointer;
       font-weight: bold;
       transition: all 0.5s;
+
       span {
         border-bottom: 0.125rem solid #fff;
         padding-bottom: 0.2rem;
         margin-right: 0.5rem;
       }
+
       img {
         filter: invert(100%);
         width: 1.15rem;
         height: 1.15rem;
       }
     }
+
     #copyEmail {
       position: absolute;
       top: 0;
@@ -813,20 +978,24 @@ header {
     transform: scaleX(0);
     transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
+
   .header_line.is-inview {
     transform: scaleX(1);
   }
   .about-inner {
     display: flex;
     justify-content: space-between;
+
     .about-info {
       line-height: 1.75rem;
     }
     .about-skills {
       width: 45vw;
+
       .about-skills-inner {
         font-size: 2rem;
         margin-top: -2rem;
+
         li {
           height: auto;
           line-height: 6rem;
@@ -876,23 +1045,18 @@ header {
             opacity: 1;
             transform: translateY(0px);
           }
-
           p.is-inview.delay01 {
             transition-delay: 0.25s;
           }
-
           p.is-inview.delay02 {
             transition-delay: 0.3s;
           }
-
           p.is-inview.delay03 {
             transition-delay: 0.35s;
           }
-
           p.is-inview.delay04 {
             transition-delay: 0.4s;
           }
-
           p.is-inview.delay05 {
             transition-delay: 0.45s;
           }
@@ -907,6 +1071,7 @@ header {
             opacity: 0;
             transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
           }
+
           .skill_line.is-inview {
             width: 100%;
             opacity: 1;
@@ -933,12 +1098,17 @@ header {
   }
 }
 
+.m-works-title {
+  display: none;
+}
+
 .works-title {
   height: 10rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
   h2 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -949,10 +1119,10 @@ header {
 #works {
   padding-top: 7.5rem;
 }
+
 .works {
   min-height: 80vh;
   position: relative;
-
   &:nth-child(odd) {
     .works-image {
       left: 0;
@@ -1010,6 +1180,7 @@ header {
           transform: translate(-50%, -50%);
           font-size: 1.5rem;
         }
+
         img {
           position: absolute;
           top: 50%;
@@ -1019,6 +1190,7 @@ header {
           height: 4rem;
           filter: invert(100%);
         }
+
         svg {
           fill: #fff;
           width: 100%;
@@ -1030,7 +1202,6 @@ header {
       }
     }
   }
-
   .works-section-title {
     position: absolute;
     // z-index: 3;
@@ -1046,6 +1217,7 @@ header {
       font-size: 5rem;
       position: relative;
       margin-bottom: 0.75rem;
+
       span {
         position: absolute;
         top: 0;
@@ -1063,14 +1235,17 @@ header {
     background-position: center;
     background-image: url("../assets/image/works/works-image_01.jpg");
   }
+
   .works-section_image02 {
     background-position: 40%;
     background-image: url("../assets/image/works/works-image_02.jpg");
   }
+
   .works-section_image03 {
     background-position: right;
     background-image: url("https://www.samhwa.com/files/editor/upload/1621919214975_11.png");
   }
+
   .works-section_image04 {
     background-position: 85%;
     background-image: url("https://image.laftel.net/carousel/carousel_hero_bocchan_w.jpg?Expires=1625565328&Signature=m8kh71vaoOl9hS76QlisqzjwfkkNPZAmM~oShU8mwx7rRCGuwxofPhqLtrvZkcp4goZATFZUkgZxPXacMnBPWlCR~6DKyqXhpuMdubM2xf9bzD01sd-qvMobtVd5dCY9jrm0nq7zUdj7xr2euVSwhGMFu1MPJRPzDu2Yjj4cdSrjXWJu5RjvSeXKtdSFx1Jv~La3wyFqWcGeCmo7kVTiN3H5wVfAM72buqfALyBBJ2Fjx1B1nnb8tZw539JbG0zZ08YLujKYspM0SMtHV0noXimPQmwOl7pOY3nrBSWdQ311~uWmsg2qYqtHmRE2ZbRgb6Mm3sgR9SbyYbqr8HqU8A__&Key-Pair-Id=APKAJMMAKL567BYWKQ5A");
@@ -1082,14 +1257,17 @@ header {
   align-items: center;
   display: flex;
   justify-content: space-between;
+
   .contact-title {
     height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     h2 {
       font-size: 5rem;
     }
+
     h3 {
       line-height: 2rem;
       font-weight: 300;
@@ -1117,7 +1295,6 @@ header {
     label {
       font-size: 1.5rem;
     }
-
     .user-info {
       width: 100%;
       height: 30%;
@@ -1136,7 +1313,6 @@ header {
         flex-direction: column;
       }
     }
-
     .message-wrap {
       width: 100%;
       height: 60%;
@@ -1168,7 +1344,6 @@ header {
         align-self: flex-end;
         background-color: transparent;
         border: 1px solid #fff;
-
         transition: all 0.5s;
 
         &:hover {
@@ -1179,7 +1354,6 @@ header {
     }
   }
 }
-
 // tablet
 @media all and (max-width: 1024px) {
   // Tablet banner
@@ -1201,29 +1375,33 @@ header {
       bottom: 25%;
       right: 0;
     }
+
     .banner-items {
       width: 25rem;
       height: 25rem;
+
       .banner-symbol-wrap {
         width: 100%;
         height: 100%;
       }
+
       .banner-symbol {
         width: 15rem;
         height: 15rem;
         border-radius: 15rem;
       }
+
       .deco-text01 {
         width: 25rem;
         height: 25rem;
       }
     }
+
     .deco-text02 {
       top: 47.5%;
       right: 5%;
     }
   }
-
   // Tablet About section
   #about {
     padding-top: 0;
@@ -1250,12 +1428,12 @@ header {
       .about-info {
         display: none;
       }
+
       .about-skills {
         width: 100%;
       }
     }
   }
-
   // Tablet Works section
   .works {
     .works-inner {
@@ -1279,6 +1457,7 @@ header {
           p {
             font-size: 1rem;
           }
+
           img {
             width: 2.5rem;
             height: 2.5rem;
@@ -1286,13 +1465,13 @@ header {
         }
       }
     }
-
     .works-section-title {
       h2 {
         text-shadow: 2px 2px 10px rgba(61, 61, 61, 0.651);
         padding-left: 2rem;
         font-size: 3.5rem;
         margin-bottom: 0;
+
         span {
           top: -0.5;
           font-size: 0.75rem;
@@ -1305,18 +1484,22 @@ header {
   #contact {
     justify-content: center;
     flex-direction: column;
+
     .contact-title {
       padding-top: 6.5rem;
       margin-bottom: 2rem;
       height: auto;
       display: block;
+
       h2 {
         font-size: 4rem;
       }
+
       h3 {
         display: none;
       }
     }
+
     .contact-form {
       width: 50vw;
     }
@@ -1327,6 +1510,13 @@ header {
 @media screen and (max-width: 768px) {
   section {
     // border: 1px solid green;
+    .web {
+      display: none;
+    }
+
+    .mobile {
+      display: inline;
+    }
   }
 
   // Mobile header
@@ -1334,6 +1524,7 @@ header {
     .section-anchor {
       a {
         font-size: 1rem;
+
         &:not(:last-child) {
           margin-right: 1.25rem;
         }
@@ -1341,70 +1532,134 @@ header {
     }
   }
 
-  // Mobile banner
+  // // Mobile banner
   .banner {
-    .banner-title {
+    .m-banner-title.is-inview {
       h1 {
-        &:nth-child(2) {
-          margin-top: 0.75rem;
+        div {
+          transform: none;
+          opacity: 1;
         }
-        font-size: 3rem;
-        line-height: 2.25rem;
+
+        &:first-child {
+          div {
+            transition-delay: 0.3s;
+          }
+        }
+
+        &:nth-child(2) {
+          div {
+            transition-delay: 0.4s;
+          }
+        }
+
+        &:nth-child(3) {
+          div {
+            transition-delay: 0.5s;
+          }
+        }
+
+        &:nth-child(4) {
+          div {
+            transition-delay: 0.6s;
+          }
+        }
+      }
+    }
+
+    .m-banner-title {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10rem;
+
+      h1 {
+        perspective: 600px;
+        -webkit-perspective: 600px;
+        font-size: 2.5rem;
+        line-height: 3.25rem;
+
+        div {
+          opacity: 0;
+          transform-origin: center top;
+          transform-style: preserve-3d;
+          transform: translateY(100%) rotateX(-80deg);
+          transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
       }
     }
 
     .banner-items-wrap {
-      top: 35%;
-      right: -5%;
+      bottom: 30%;
+      right: 10%;
     }
+
     .banner-items {
-      width: 15rem;
-      height: 15rem;
+      width: 13.5rem;
+      height: 13.5rem;
+
       .banner-symbol-wrap {
-        width: 100%;
-        height: 100%;
+        display: block;
       }
+
       .banner-symbol {
-        width: 8.75rem;
-        height: 8.75rem;
-        border-radius: 8.75rem;
+        width: 13.5rem;
+        height: 13.5rem;
+        border-radius: 15rem;
       }
-      .deco-text01 {
-        width: 15rem;
-        height: 15rem;
+
+      .m-deco-text01 {
+        position: absolute;
+        bottom: -22.5%;
+        right: -90%;
+        width: 7.5rem;
+        height: 7.5rem;
+
+        svg {
+          fill: #fff;
+          width: 100%;
+          height: 100%;
+          font-family: "Syncopate", sans-serif;
+          font-weight: bold;
+          animation: rotate360 15s linear infinite;
+        }
       }
     }
 
     .deco-text02 {
-      font-size: 0.75rem;
-      top: 50%;
-      right: -23.75%;
+      display: none;
     }
 
     .deco-text03 {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       bottom: 8.5rem;
       line-height: 1.25rem;
+      left: 0;
     }
     .deco-text04 {
       font-size: 0.75rem;
       bottom: 7.5rem;
       line-height: 1.25rem;
+      left: 0;
     }
   }
 
-  // Tablet About section
+  // Mobile About
   #about {
-    padding-top: 0;
-    margin-bottom: 5rem;
+    position: relative;
 
     .about-link {
+      position: absolute;
+      top: 15%;
+      left: 0;
+
       a {
-        margin-right: 2.5rem;
-        font-size: 0.75rem;
+        margin-right: 3rem;
+        font-size: 0.875rem;
       }
+
       button {
-        font-size: 0.75rem;
+        font-size: 0.875rem;
+
         img {
           width: 0.75rem;
           height: 0.75rem;
@@ -1413,60 +1668,94 @@ header {
     }
 
     .about-title {
-      font-size: 2rem;
-      margin-top: 4.5rem;
-    }
-
-    .about-title-item {
-      left: 10.5rem;
+      display: none;
     }
 
     .header_line {
-      margin-top: 0.5rem;
-      margin-bottom: 2.5rem;
+      display: none;
     }
 
     .about-inner {
-      .about-skills {
+      display: none;
+    }
+  }
+
+  .m-about-inner {
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    .m-about-info {
+      margin-bottom: 5rem;
+      line-height: 1.5rem;
+    }
+
+    .swiper-container {
+      width: 90vw;
+      height: 45vh;
+      overflow: visible;
+    }
+
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-slide {
         width: 100%;
-        .about-skills-inner {
-          font-size: 1.25rem;
-          li {
-            line-height: 4.5rem;
-            padding: 0 2rem;
+        height: 100%;
+        background: #fff;
+        color: #000;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            span {
-              position: absolute;
-              top: -0.4rem;
-              left: 0;
-              font-size: 0.5em;
-            }
+        .slide-skill-box {
+          width: 80%;
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
 
-            img {
-              width: 0.75rem;
-              height: 0.75rem;
-            }
+          strong {
+            font-size: 1.25rem;
+            font-family: "Krona One", sans-serif;
+          }
 
-            .about-skill-more {
-              width: 100%;
-              height: auto;
-              padding-top: 1rem;
-              padding-bottom: 2rem;
-            }
+          p {
+            font-family: "ELAND_Choice_M", sans-serif;
+            font-size: 1rem;
+            line-height: 1.5rem;
           }
         }
       }
     }
+
+    .swiper-pagination {
+      text-align: right;
+      top: -2rem;
+    }
   }
 
-  // 여기까지함
-  // about li들 아코디언 슬라이드업할때 버그 수정할것
   .works-title {
+    display: none;
+  }
+
+  .m-works-title {
+    text-align: center;
+    display: block;
     height: 10rem;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 3rem;
     }
   }
 }
