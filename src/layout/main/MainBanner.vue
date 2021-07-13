@@ -32,14 +32,14 @@
             </defs>
             <text font-size="7">
               <textPath xlink:href="#circle">
-                Copyright © da hye kim, All rights reserved ㅡ
+                Copyright &copy; da hye kim, All rights reserved &mdash;
               </textPath>
             </text>
           </svg>
         </div>
       </div>
 
-      <p class="deco-text02">&#169; 2021</p>
+      <p class="deco-text02">&copy; 2021</p>
     </div>
 
     <div class="banner-info-wrap">
@@ -107,8 +107,8 @@ $point: rgb(175, 0, 0);
   transform: translateY(-50%);
   z-index: 3;
   div {
-    font-size: 8.5vw;
-    line-height: 8.5vw;
+    font-size: 7vw;
+    line-height: 7vw;
     &:not(:last-child) p {
       color: $blue;
     }
@@ -188,12 +188,14 @@ $point: rgb(175, 0, 0);
 }
 
 .deco-text03 {
+  font-size: 0.8rem;
   line-height: 1.6rem;
   font-family: "Syncopate", sans-serif;
   opacity: 0.8;
 }
 
 .deco-text04 {
+  font-size: 0.8rem;
   line-height: 1.6rem;
   font-family: "Syncopate", sans-serif;
   opacity: 0.7;

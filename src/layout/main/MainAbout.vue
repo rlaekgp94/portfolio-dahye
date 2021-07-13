@@ -115,8 +115,6 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
-
-              <div class="skill_line delay01"></div>
             </li>
 
             <li>
@@ -134,8 +132,6 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
-
-              <div class="skill_line delay02"></div>
             </li>
 
             <li>
@@ -153,8 +149,6 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
-
-              <div class="skill_line delay03"></div>
             </li>
 
             <li>
@@ -172,8 +166,6 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
-
-              <div class="skill_line delay04"></div>
             </li>
 
             <li>
@@ -191,8 +183,6 @@
                 유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
                 업무 프로세스를 지향합니다.
               </div>
-
-              <div class="skill_line delay05"></div>
             </li>
           </ul>
         </div>
@@ -211,9 +201,10 @@ export default {
   mounted() {
     // About Skill Accordion Slide
     const skill_btn = $(".about-skill-more-btn");
+
     skill_btn.click(function () {
       $(".about-skill-more")
-        .not($(this).next(".about-skill-more").slideToggle(500))
+        .not($(this).next(".about-skill-more").slideToggle(400))
         .slideUp();
     });
 
@@ -362,6 +353,7 @@ $point: rgb(175, 0, 0);
     padding: 0 2rem 0 3rem;
     display: flex;
     flex-direction: column;
+    border-bottom: 0.025rem solid rgba(255, 255, 255, 0.5);
 
     .about-skill-more-btn {
       cursor: pointer;
@@ -395,15 +387,6 @@ $point: rgb(175, 0, 0);
   padding-bottom: 2rem;
 }
 
-.skill_line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  height: 0.025rem;
-}
-
 // mobile
 @media screen and (max-width: 768px) {
   #about {
@@ -427,6 +410,12 @@ $point: rgb(175, 0, 0);
 
   .about-link {
     margin-bottom: 3rem;
+    a {
+      font-size: 1rem;
+    }
+    button {
+      font-size: 1rem;
+    }
   }
 
   .m-about-inner {

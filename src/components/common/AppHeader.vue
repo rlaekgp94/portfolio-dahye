@@ -71,7 +71,7 @@ $red: rgb(175, 0, 0);
 
 header {
   width: 100vw;
-  height: 4rem;
+  height: 3rem;
   position: fixed;
   z-index: 10;
   transition: all 0.5s;
@@ -101,7 +101,7 @@ header {
 
     a {
       color: $blue;
-      font-size: 1rem;
+      font-size: 0.8rem;
       position: relative;
       transition: all 0.5s;
 
@@ -154,6 +154,9 @@ header {
   header {
     .nav-inner {
       justify-content: center;
+      a {
+        font-size: 1rem;
+      }
     }
   }
 }

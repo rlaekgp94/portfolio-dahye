@@ -1,67 +1,79 @@
 <template>
-  <div data-scroll-container>
+  <div id="work-section">
     <header>
-      <router-link to="/"
-        ><img
-          src="@/assets/image/icons/left-arrow.svg"
-          alt="홈버튼"
-        />HOME</router-link
-      >
+      <div class="nav-inner">
+        <ul>
+          <li class="mobile">non</li>
+          <li><router-link to="/">HOME</router-link></li>
+          <li class="mobile">
+            <router-link to="/works-Marshall"
+              ><img src="@/assets/image/icons/left-arrow.svg" alt="다음 페이지"
+            /></router-link>
+          </li>
+        </ul>
+      </div>
     </header>
 
-    <div class="fixed-link-btn">
+    <div class="fixed-link-btn web">
       <router-link class="next-link-btn" to="/works-Marshall">NEXT</router-link>
     </div>
 
-    <section class="works-banner" data-scroll-section>
+    <section class="works-banner">
       <img
-        data-scroll
-        data-scroll-speed="2"
-        data-scroll-delay="0.075"
         src="https://printbakery.cafe24.com/%40/img/background.png"
         alt="프린트베이커리 로고"
       />
     </section>
 
-    <section data-scroll-section>
+    <section>
       <div>ㅎㅇ</div>
     </section>
 
-    <section data-scroll-section>
+    <section>
       <div>ㅎㅇ</div>
     </section>
 
-    <section data-scroll-section>
+    <section>
       <div>ㅎㅇ</div>
     </section>
 
-    <section data-scroll-section>
+    <section>
       <div>ㅎㅇ</div>
     </section>
   </div>
 </template>
 
 <script>
-import LocomotiveScroll from "locomotive-scroll";
+import $ from "jquery";
 export default {
+  name: "Header",
   mounted() {
-    new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true,
-      smartphone: { smooth: true },
-      tablet: { smooth: true }
-    });
+    let nav = $("header"),
+      navText = $("header a"),
+      navBtn = $("header img");
 
-    window.addEventListener("resize", function () {
-      scroll.update();
+    $(window).scroll(function () {
+      let scroll = $(window).scrollTop();
+      if (scroll === 0) {
+        nav.css("background", "transparent");
+        navText.css("color", "#fff");
+        navBtn.css("filter", "invert(100%)");
+      } else {
+        nav.css("background", "#fff");
+        navText.css("color", "#0a4aee");
+        navBtn.css({
+          filter:
+            "invert(21%) sepia(92%) saturate(3685%) hue-rotate(224deg) brightness(92%) contrast(108%)"
+        });
+      }
     });
   }
 };
 </script>
 
 <style lang="scss" scoped>
-$normal-color: #0a4aee;
-$accent-color: rgb(175, 0, 0);
+$blue: #0a4aee;
+$point: rgb(175, 0, 0);
 
 // fade-up
 @keyframes moveUp {
@@ -75,30 +87,70 @@ $accent-color: rgb(175, 0, 0);
   }
 }
 
+.mobile {
+  display: none;
+}
+
 header {
+  width: 100vw;
+  height: 3rem;
   position: fixed;
-  top: 5vh;
-  left: 5vw;
   z-index: 10;
-  a {
-    color: #fff;
-    font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-inner {
+  width: 90vw;
+  background: transparent;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    &:hover {
-      color: $normal-color;
-      img {
-        filter: invert(21%) sepia(92%) saturate(3685%) hue-rotate(224deg)
-          brightness(92%) contrast(108%);
+
+    li {
+      &:not(:last-child) {
+        margin-right: 2.5rem;
+      }
+
+      &:first-child {
+        opacity: 0;
+      }
+
+      &:last-child {
+        img {
+          transform: rotate(0deg);
+          transform: scaleX(-1);
+        }
       }
     }
+  }
+
+  a {
+    color: #fff;
+    font-size: 0.8rem;
+    position: relative;
+    transition: all 0.5s;
     img {
       margin-right: 1rem;
       filter: invert(100%);
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
+}
+
+#work-section {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .fixed-link-btn {
@@ -142,6 +194,23 @@ section {
       brightness(106%) contrast(99%);
     width: 30rem;
     animation: moveUp ease-in 0.5s;
+  }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+
+  .web {
+    display: none;
+  }
+  .nav-inner {
+    justify-content: center;
+    a {
+      font-size: 1rem;
+    }
   }
 }
 </style>

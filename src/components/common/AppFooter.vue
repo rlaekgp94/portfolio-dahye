@@ -11,7 +11,7 @@ footer {
   color: #fff;
   font-size: 0.875rem;
   width: 100%;
-  height: 10rem;
+  height: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
