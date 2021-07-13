@@ -11,7 +11,6 @@
         <p>PUBLSHER</p>
       </div>
     </div>
-    <!-- web/tablet -->
 
     <div class="banner-items-wrap">
       <div class="banner-items">
@@ -38,7 +37,6 @@
             </text>
           </svg>
         </div>
-        <!-- web / tablet -->
       </div>
 
       <p class="deco-text02">&#169; 2021</p>
