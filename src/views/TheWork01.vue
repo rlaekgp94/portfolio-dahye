@@ -99,6 +99,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s;
 }
 
 .nav-inner {
@@ -210,6 +211,15 @@ section {
     justify-content: center;
     a {
       font-size: 1rem;
+    }
+  }
+
+  // banner
+  .works-banner {
+    min-height: 70vh;
+
+    img {
+      width: 15rem;
     }
   }
 }

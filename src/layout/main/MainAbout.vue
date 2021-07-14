@@ -231,7 +231,7 @@ export default {
           slidesPerGroup: 1
         },
         768: {
-          slidesPerView: 1.5,
+          slidesPerView: 2.25,
           slidesPerGroup: 1
         }
       }

@@ -11,7 +11,7 @@
                 2021
               </h1>
             </div>
-            <p>Do you want to see my project?</p>
+            <p>Do you want to <span>see my project?</span></p>
           </div>
           <span class="inner-scroll-fxied">SCROLL</span>
         </div>
@@ -159,6 +159,24 @@ $point: rgb(175, 0, 0);
   }
 }
 
+.inner-text {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: space-between;
+  flex-direction: column;
+  .title-line {
+    background: $blue;
+    width: 2.75rem;
+    height: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
 .inner-scroll-fxied {
   &::before {
     display: inline-block;
@@ -178,24 +196,6 @@ $point: rgb(175, 0, 0);
   font-size: 0.65rem;
   transform: rotate(-90deg);
   transform-origin: top left;
-}
-
-.inner-text {
-  display: flex;
-  width: 100%;
-  height: 50%;
-  justify-content: space-between;
-  flex-direction: column;
-  .title-line {
-    background: $blue;
-    width: 2.75rem;
-    height: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  h1 {
-    font-size: 3rem;
-    line-height: 4rem;
-  }
 }
 
 // list
@@ -325,5 +325,125 @@ $point: rgb(175, 0, 0);
   background-position: 75%;
   background-image: linear-gradient(rgba(0, 0, 121, 0.4), rgba(0, 71, 171, 0.2)),
     url("https://image.laftel.net/carousel/carousel_hero_bocchan_w.jpg?Expires=1625565328&Signature=m8kh71vaoOl9hS76QlisqzjwfkkNPZAmM~oShU8mwx7rRCGuwxofPhqLtrvZkcp4goZATFZUkgZxPXacMnBPWlCR~6DKyqXhpuMdubM2xf9bzD01sd-qvMobtVd5dCY9jrm0nq7zUdj7xr2euVSwhGMFu1MPJRPzDu2Yjj4cdSrjXWJu5RjvSeXKtdSFx1Jv~La3wyFqWcGeCmo7kVTiN3H5wVfAM72buqfALyBBJ2Fjx1B1nnb8tZw539JbG0zZ08YLujKYspM0SMtHV0noXimPQmwOl7pOY3nrBSWdQ311~uWmsg2qYqtHmRE2ZbRgb6Mm3sgR9SbyYbqr8HqU8A__&Key-Pair-Id=APKAJMMAKL567BYWKQ5A");
+}
+
+// tablet
+@media screen and (max-width: 1024px) {
+  .works-title-inner {
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .inner-text {
+    .title-line {
+      background: $blue;
+      width: 1.85rem;
+      height: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  // list
+  .works-list-wrap {
+    width: 50vw;
+  }
+
+  .works-list {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    height: 40vh;
+  }
+
+  .works-box {
+    &:hover .list-image {
+      transform: scale(1);
+    }
+  }
+
+  .list-info {
+    width: 70%;
+    p {
+      font-size: 1rem;
+    }
+    .logo01 {
+      margin-top: 1rem;
+      width: 15rem;
+    }
+
+    .logo02 {
+      margin-top: 1rem;
+      width: 15rem;
+    }
+
+    .logo03 {
+      margin-top: 0.25rem;
+      display: flex;
+      align-items: center;
+      img {
+        width: 7rem;
+      }
+    }
+
+    .logo04 {
+      margin-top: 2rem;
+      svg {
+        fill: #fff;
+        transform: scale(3);
+      }
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+  #works {
+    padding: 6.5rem 0 3rem;
+  }
+  .works-wrap {
+    flex-direction: column;
+  }
+
+  .works-title-wrap {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+  }
+
+  .works-title-inner {
+    p {
+      align-self: flex-end;
+    }
+  }
+
+  .inner-text {
+    flex-direction: row;
+    .title-line {
+      width: 1.5rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  .inner-scroll-fxied {
+    display: none;
+  }
+
+  // list
+  .works-list-wrap {
+    width: 100%;
+  }
 }
 </style>

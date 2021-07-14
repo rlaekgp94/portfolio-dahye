@@ -79,19 +79,6 @@ $point: rgb(175, 0, 0);
   }
 }
 
-// @keyframes bannerTitle {
-//   0% {
-//     opacity: 0;
-//     transform-origin: center top;
-//     // transform-style: preserve-3d;
-//     transform: translateY(100%) perspective(2000px) rotateX(-80deg);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: none;
-//   }
-// }
-
 #banner {
   width: 90%;
   height: 100vh;
@@ -112,18 +99,6 @@ $point: rgb(175, 0, 0);
     &:not(:last-child) p {
       color: $blue;
     }
-
-    // p {
-    //   opacity: 0;
-    //   animation: moveUp 0.5s forwards;
-    // }
-    // &:nth-child(2) p {
-    //   animation-delay: 0.2s;
-    // }
-
-    // &:nth-child(3) p {
-    //   animation-delay: 0.4s;
-    // }
   }
 }
 
@@ -203,10 +178,6 @@ $point: rgb(175, 0, 0);
 
 // tablet
 @media screen and (max-width: 1024px) {
-  #banner {
-    border: 1px solid yellow;
-  }
-
   .banner-title {
     div {
       font-size: 10.5vw;
@@ -228,10 +199,6 @@ $point: rgb(175, 0, 0);
 
 // mobile
 @media screen and (max-width: 768px) {
-  #banner {
-    border: 1px solid blue;
-  }
-
   .banner-title {
     top: 35%;
     transform: translateY(-35%);
