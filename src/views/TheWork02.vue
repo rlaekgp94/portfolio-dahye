@@ -25,14 +25,8 @@
       <router-link class="next-link-btn" to="/works-Samhwa">NEXT</router-link>
     </div>
 
-    <section class="works-banner" data-scroll-section>
-      <img
-        data-scroll
-        data-scroll-speed="2"
-        data-scroll-delay="0.075"
-        src="../assets/image/works/marshall-logo.svg"
-        alt="마쉘 로고"
-      />
+    <section class="works-banner">
+      <img src="../assets/image/works/marshall-logo.svg" alt="마쉘 로고" />
     </section>
 
     <section>

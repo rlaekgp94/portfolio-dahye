@@ -23,18 +23,9 @@
       <router-link class="next-link-btn" to="/works-Laftel">NEXT</router-link>
     </div>
 
-    <section class="works-banner" data-scroll-section>
+    <section class="works-banner">
+      <img src="../assets/image/works/samhwa-logo.svg" alt="삼화페인트 로고" />
       <img
-        data-scroll
-        data-scroll-speed="2"
-        data-scroll-delay="0.075"
-        src="../assets/image/works/samhwa-logo.svg"
-        alt="삼화페인트 로고"
-      />
-      <img
-        data-scroll
-        data-scroll-speed="2"
-        data-scroll-delay="0.075"
         src="../assets/image/works/samhwa-logo-befor.svg"
         alt="삼화페인트 로고"
       />
