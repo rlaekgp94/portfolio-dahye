@@ -410,6 +410,7 @@ $point: rgb(175, 0, 0);
     padding: 6.5rem 0 3rem;
   }
   .works-wrap {
+    width: 85vw;
     flex-direction: column;
   }
 
@@ -422,6 +423,7 @@ $point: rgb(175, 0, 0);
 
   .works-title-inner {
     p {
+      font-size: 0.875rem;
       align-self: flex-end;
     }
   }
@@ -432,7 +434,7 @@ $point: rgb(175, 0, 0);
       width: 1.5rem;
     }
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       line-height: 2rem;
     }
   }
@@ -444,6 +446,50 @@ $point: rgb(175, 0, 0);
   // list
   .works-list-wrap {
     width: 100%;
+  }
+
+  .works-list {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    height: 30vh;
+  }
+
+  .list-info {
+    p {
+      font-size: 0.875rem;
+    }
+    .logo01 {
+      margin-top: 0.75rem;
+      width: 12.5rem;
+    }
+
+    .logo02 {
+      margin-top: 0.75rem;
+      width: 12.5rem;
+    }
+
+    .logo03 {
+      margin-top: 0;
+      img {
+        width: 6rem;
+      }
+    }
+
+    .logo04 {
+      margin-top: 1.5rem;
+      svg {
+        transform: scale(2.5);
+      }
+    }
+  }
+
+  .more-btn {
+    height: 1.85rem;
+    p {
+      font-size: 0.65rem;
+      margin-right: 1rem;
+    }
   }
 }
 </style>

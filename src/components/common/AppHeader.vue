@@ -155,7 +155,7 @@ header {
     .nav-inner {
       justify-content: center;
       a {
-        font-size: 1rem;
+        font-size: 0.875rem;
       }
     }
   }

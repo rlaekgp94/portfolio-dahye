@@ -69,22 +69,6 @@
         </div>
       </div>
     </section>
-
-    <section>
-      <div>ㅎㅇ</div>
-    </section>
-
-    <section>
-      <div>ㅎㅇ</div>
-    </section>
-
-    <section>
-      <div>ㅎㅇ</div>
-    </section>
-
-    <section>
-      <div>ㅎㅇ</div>
-    </section>
   </div>
 </template>
 
@@ -167,6 +151,7 @@ header {
   }
 
   a {
+    display: block;
     color: #fff;
     font-size: 0.8rem;
     position: relative;

@@ -199,6 +199,11 @@ $point: rgb(175, 0, 0);
 
 // mobile
 @media screen and (max-width: 768px) {
+  #banner {
+    height: 85vh;
+    width: 85vw;
+  }
+
   .banner-title {
     top: 35%;
     transform: translateY(-35%);
@@ -213,7 +218,7 @@ $point: rgb(175, 0, 0);
 
   .banner-items-wrap {
     position: absolute;
-    top: 45%;
+    top: 40%;
     right: 15%;
     z-index: 1;
   }
@@ -242,13 +247,17 @@ $point: rgb(175, 0, 0);
     font-size: 0.875rem;
   }
 
+  .banner-info-wrap {
+    bottom: 0;
+  }
+
   .deco-text03 {
-    line-height: 1.25rem;
-    font-size: 0.7rem;
+    line-height: 1.5rem;
+    font-size: 0.67rem;
   }
 
   .deco-text04 {
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     font-size: 0.75rem;
   }
 }

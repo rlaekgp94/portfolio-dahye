@@ -109,7 +109,7 @@ export default {
   input,
   textarea {
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.875rem;
     letter-spacing: 0.25rem;
     background: none;
     outline: none;
@@ -117,7 +117,7 @@ export default {
   }
 
   label {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -245,14 +245,13 @@ export default {
   }
 
   .contact-wrap {
-    width: 90vw;
+    width: 85vw;
   }
 
   .contact-title {
     margin-bottom: 3rem;
-
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
 
@@ -262,7 +261,7 @@ export default {
 
   .user-info {
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     div {
       width: 100%;
       margin-bottom: 2rem;
@@ -271,7 +270,7 @@ export default {
 
   .message-wrap {
     textarea {
-      height: 6.5rem;
+      height: 5rem;
     }
   }
 }

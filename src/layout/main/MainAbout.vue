@@ -210,7 +210,7 @@ export default {
 
     // About Mobile Skills slide
     new Swiper(".swiper-container", {
-      spaceBetween: 25,
+      spaceBetween: 20,
       paginationType: "custom",
       loop: false,
       autoplay: {
@@ -223,11 +223,11 @@ export default {
       },
       breakpoints: {
         320: {
-          slidesPerView: 1.25,
+          slidesPerView: 1.5,
           slidesPerGroup: 1
         },
         480: {
-          slidesPerView: 1.25,
+          slidesPerView: 1.5,
           slidesPerGroup: 1
         },
         768: {
@@ -390,11 +390,15 @@ $point: rgb(175, 0, 0);
 // mobile
 @media screen and (max-width: 768px) {
   #about {
-    height: 90vh;
+    height: 85vh;
     padding: 5rem 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .about-wrap {
+    width: 85vw;
   }
 
   .web {
@@ -411,10 +415,14 @@ $point: rgb(175, 0, 0);
   .about-link {
     margin-bottom: 3rem;
     a {
-      font-size: 1rem;
+      font-size: 0.75rem;
     }
     button {
-      font-size: 1rem;
+      font-size: 0.75rem;
+      img {
+        width: 0.7rem;
+        height: 0.7rem;
+      }
     }
   }
 
@@ -424,13 +432,14 @@ $point: rgb(175, 0, 0);
   }
 
   .m-about-info {
+    font-size: 0.875rem;
     line-height: 1.5rem;
     margin-bottom: 5rem;
   }
 
   .swiper-container {
     width: 90vw;
-    height: 45vh;
+    height: 40vh;
     overflow: visible;
   }
 
@@ -458,13 +467,13 @@ $point: rgb(175, 0, 0);
     flex-direction: column;
 
     strong {
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-family: "Krona One", sans-serif;
     }
 
     p {
       font-family: "ELAND_Choice_M", sans-serif;
-      font-size: 1rem;
+      font-size: 0.875rem;
       line-height: 1.5rem;
     }
   }
