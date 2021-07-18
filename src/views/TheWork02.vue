@@ -25,8 +25,52 @@
       <router-link class="next-link-btn" to="/works-Samhwa">NEXT</router-link>
     </div>
 
-    <section class="works-banner">
-      <img src="../assets/image/works/marshall-logo.svg" alt="마쉘 로고" />
+    <section class="works-banner-wrap">
+      <div class="works-banner-inner">
+        <div class="project-title-wrap">
+          <div class="project-title">
+            <p>해외 앰프 설계/제작 브랜드 사이트</p>
+            <img src="@/assets/image/works/marshall-logo.svg" alt="마쉘 로고" />
+          </div>
+          <div class="banner-link-btn">
+            <a href="#">Github</a>
+            <a href="#">Demo</a>
+          </div>
+        </div>
+
+        <div class="project-info-wrap">
+          <ul>
+            <li class="info">
+              <h2>Project type</h2>
+              <div>
+                <p>Renewal Project</p>
+                <p>Only Web</p>
+              </div>
+            </li>
+            <li class="info">
+              <h2>Personal Project</h2>
+              <div>
+                <p>Design 100%</p>
+                <p>publishing 100%</p>
+              </div>
+            </li>
+            <li class="info">
+              <h2>Keyword</h2>
+              <div class="keyword-wrap">
+                <VUE class="keyword" /><CSS3 class="keyword" /><JQUERY
+                  class="keyword"
+                /><JS class="keyword" />
+              </div>
+            </li>
+            <li class="info">
+              <h2>Open source used</h2>
+              <div>
+                <p>Swiper.js</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section>
@@ -71,6 +115,12 @@ export default {
         });
       }
     });
+  },
+  components: {
+    VUE: () => import("@/components/keyword/vueKeyword.vue"),
+    CSS3: () => import("@/components/keyword/cssKeyword.vue"),
+    JQUERY: () => import("@/components/keyword/jqueryKeyword.vue"),
+    JS: () => import("@/components/keyword/jsKeyword.vue")
   }
 };
 </script>
@@ -78,18 +128,6 @@ export default {
 <style lang="scss" scoped>
 $blue: #0a4aee;
 $point: rgb(175, 0, 0);
-
-// fade-up
-@keyframes moveUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 
 .mobile {
   display: none;
@@ -184,22 +222,168 @@ header {
 // 기본값
 section {
   width: 90vw;
-  min-height: 100vh;
   margin: 0 auto;
 }
 
-.works-banner {
+.works-banner-wrap {
   width: 100vw;
-  background: linear-gradient(rgba(12, 12, 12, 0.4), #1a181b),
+  height: 100vh;
+  background: linear-gradient(rgba(12, 12, 12, 0.65), #1a181b),
     url("https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw8b196dac/images/categories/speakers/speakers-main-category/Desktop_Hero_Speakers_1927x800.jpg?sw=2000&sh=2000&sm=fit")
       no-repeat center / cover;
+}
+
+.works-banner-inner {
+  width: 90vw;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-title-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 55%;
+}
+
+.project-info-wrap {
+  width: 45%;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  p {
+    font-family: "ELAND_Choice_M";
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
 
   img {
-    width: 30rem;
-    animation: moveUp ease-in 0.5s;
+    width: 20rem;
+  }
+}
+
+.project-info-wrap {
+  ul li {
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    padding: 2rem 0;
+    border-bottom: 0.05rem solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+.info {
+  &:not(:nth-child(3)) {
+    div {
+      p {
+        width: 50%;
+      }
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.keyword-wrap {
+  .keyword {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.banner-link-btn {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 16rem;
+  height: 100%;
+  a {
+    background: #fff;
+    color: #000;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    width: 7rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    display: block;
+    border-radius: 2rem;
+  }
+}
+
+// tablet
+@media screen and (max-width: 1024px) {
+  .nav-inner {
+    a {
+      font-size: 1rem;
+    }
+  }
+
+  .works-banner-inner {
+    flex-direction: column;
+  }
+
+  .project-title-wrap {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .project-info-wrap {
+    width: 60%;
+    ul li {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .project-title {
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .banner-link-btn {
+    margin-top: 1.5rem;
+    width: 20rem;
+    a {
+      width: 8.5rem;
+      height: 2.25rem;
+      line-height: 2.25rem;
+      border-radius: 2.25rem;
+    }
   }
 }
 
@@ -214,17 +398,47 @@ section {
   }
   .nav-inner {
     justify-content: center;
-    a {
-      font-size: 1rem;
+  }
+
+  .works-banner-wrap {
+    height: auto;
+    background: none;
+  }
+
+  .works-banner-inner {
+    width: 100%;
+  }
+
+  .banner-link-btn {
+    justify-content: space-around;
+    height: auto;
+  }
+
+  .project-title-wrap {
+    height: 50vh;
+    margin-bottom: 0;
+    background: linear-gradient(rgba(12, 12, 12, 0.5), #1a181b),
+      url("https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw8b196dac/images/categories/speakers/speakers-main-category/Desktop_Hero_Speakers_1927x800.jpg?sw=2000&sh=2000&sm=fit")
+        no-repeat center / cover;
+  }
+
+  .project-title {
+    img {
+      width: 15rem;
     }
   }
 
-  // banner
-  .works-banner {
-    min-height: 70vh;
+  .project-info-wrap {
+    width: 85vw;
+  }
 
-    img {
-      width: 15rem;
+  .keyword-wrap {
+    display: flex;
+    justify-content: space-between;
+    .keyword {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 }

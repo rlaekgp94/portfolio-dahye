@@ -1,5 +1,5 @@
 <template>
-  <div class="keyword-wrap">vue.js</div>
+  <div class="keyword-wrap">Vue.js</div>
 </template>
 
 <style lang="scss" scoped>
@@ -16,5 +16,12 @@
   padding: 0 1rem;
   text-align: center;
   line-height: 1.65rem;
+}
+
+// tablet
+@media screen and (max-width: 1024px) {
+  .keyword-wrap {
+    font-size: 1rem;
+  }
 }
 </style>

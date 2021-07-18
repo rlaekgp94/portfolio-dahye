@@ -52,7 +52,7 @@
             </li>
             <li class="info">
               <h2>Keyword</h2>
-              <div>
+              <div class="keyword-wrap">
                 <HTML class="keyword" /><CSS3 class="keyword" /><JQUERY
                   class="keyword"
                 /><JS class="keyword" />
@@ -125,18 +125,6 @@ export default {
 <style lang="scss" scoped>
 $blue: #0a4aee;
 $point: rgb(175, 0, 0);
-
-// fade-up
-@keyframes moveUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 
 .mobile {
   display: none;
@@ -271,14 +259,13 @@ section {
   p {
     font-family: "ELAND_Choice_M";
     font-size: 0.85rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   img {
     filter: invert(100%) sepia(0%) saturate(7432%) hue-rotate(4deg)
       brightness(106%) contrast(99%);
     width: 20rem;
-    animation: moveUp ease-in 0.5s;
   }
 }
 
@@ -316,6 +303,9 @@ section {
       flex-direction: row;
     }
   }
+}
+
+.keyword-wrap {
   .keyword {
     &:not(:last-child) {
       margin-right: 1rem;
@@ -346,6 +336,12 @@ section {
 
 // tablet
 @media screen and (max-width: 1024px) {
+  .nav-inner {
+    a {
+      font-size: 1rem;
+    }
+  }
+
   .works-banner-inner {
     flex-direction: column;
   }
@@ -357,8 +353,16 @@ section {
 
   .project-info-wrap {
     width: 60%;
-  }
+    ul li {
+      h2 {
+        font-size: 1.5rem;
+      }
 
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
   .project-title {
     p {
       font-size: 1rem;
@@ -389,9 +393,6 @@ section {
   }
   .nav-inner {
     justify-content: center;
-    a {
-      font-size: 1rem;
-    }
   }
 
   .works-banner-wrap {
@@ -404,6 +405,7 @@ section {
   }
 
   .banner-link-btn {
+    justify-content: space-around;
     height: auto;
   }
 
@@ -414,8 +416,24 @@ section {
       url("../assets/image/works/works-image_01.jpg") no-repeat center / cover;
   }
 
+  .project-title {
+    img {
+      width: 15rem;
+    }
+  }
+
   .project-info-wrap {
     width: 85vw;
+  }
+
+  .keyword-wrap {
+    display: flex;
+    justify-content: space-between;
+    .keyword {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
   }
 }
 </style>
