@@ -11,10 +11,10 @@
   background: #fff;
   color: #252525;
   width: auto;
-  height: 1.5rem;
+  height: 1.65rem;
   border-radius: 2rem;
   padding: 0 1rem;
   text-align: center;
-  line-height: 1.5rem;
+  line-height: 1.65rem;
 }
 </style>

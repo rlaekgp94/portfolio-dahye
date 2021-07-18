@@ -18,11 +18,56 @@
       <router-link class="next-link-btn" to="/works-Marshall">NEXT</router-link>
     </div>
 
-    <section class="works-banner">
-      <img
-        src="https://printbakery.cafe24.com/%40/img/background.png"
-        alt="프린트베이커리 로고"
-      />
+    <section class="works-banner-wrap">
+      <div class="works-banner-inner">
+        <div class="project-title-wrap">
+          <div class="project-title">
+            <p>국내 미술품 경매 브랜드 사이트</p>
+            <img
+              src="https://printbakery.cafe24.com/%40/img/background.png"
+              alt="프린트베이커리 로고"
+            />
+          </div>
+          <div class="banner-link-btn">
+            <a href="#">Github</a>
+            <a href="#">Demo</a>
+          </div>
+        </div>
+
+        <div class="project-info-wrap">
+          <ul>
+            <li class="info">
+              <h2>Project type</h2>
+              <div>
+                <p>Renewal Project</p>
+                <p>Responsive Website</p>
+              </div>
+            </li>
+            <li class="info">
+              <h2>Personal Project</h2>
+              <div>
+                <p>Design 100%</p>
+                <p>publishing 100%</p>
+              </div>
+            </li>
+            <li class="info">
+              <h2>Keyword</h2>
+              <div>
+                <HTML class="keyword" /><CSS3 class="keyword" /><JQUERY
+                  class="keyword"
+                /><JS class="keyword" />
+              </div>
+            </li>
+            <li class="info">
+              <h2>Open source used</h2>
+              <div>
+                <p>Swiper.js</p>
+                <p>Pullpage.js</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section>
@@ -67,6 +112,12 @@ export default {
         });
       }
     });
+  },
+  components: {
+    HTML: () => import("@/components/keyword/htmlKeyword.vue"),
+    CSS3: () => import("@/components/keyword/cssKeyword.vue"),
+    JQUERY: () => import("@/components/keyword/jqueryKeyword.vue"),
+    JS: () => import("@/components/keyword/jsKeyword.vue")
   }
 };
 </script>
@@ -178,23 +229,152 @@ header {
 // 기본값
 section {
   width: 90vw;
-  min-height: 100vh;
   margin: 0 auto;
 }
 
-.works-banner {
+.works-banner-wrap {
   width: 100vw;
-  background: linear-gradient(rgba(12, 12, 12, 0.2), #1a181b),
+  height: 100vh;
+  background: linear-gradient(rgba(12, 12, 12, 0.5), #1a181b),
     url("../assets/image/works/works-image_01.jpg") no-repeat center / cover;
+}
+
+.works-banner-inner {
+  width: 90vw;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-title-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 55%;
+}
+
+.project-info-wrap {
+  width: 45%;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  p {
+    font-family: "ELAND_Choice_M";
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
 
   img {
     filter: invert(100%) sepia(0%) saturate(7432%) hue-rotate(4deg)
       brightness(106%) contrast(99%);
-    width: 30rem;
+    width: 20rem;
     animation: moveUp ease-in 0.5s;
+  }
+}
+
+.project-info-wrap {
+  ul li {
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    padding: 2rem 0;
+    border-bottom: 0.05rem solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+.info {
+  &:not(:nth-child(3)) {
+    div {
+      p {
+        width: 50%;
+      }
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .keyword {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.banner-link-btn {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 16rem;
+  height: 100%;
+  a {
+    background: #fff;
+    color: #000;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    width: 7rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    display: block;
+    border-radius: 2rem;
+  }
+}
+
+// tablet
+@media screen and (max-width: 1024px) {
+  .works-banner-inner {
+    flex-direction: column;
+  }
+
+  .project-title-wrap {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .project-info-wrap {
+    width: 60%;
+  }
+
+  .project-title {
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .banner-link-btn {
+    margin-top: 1.5rem;
+    width: 20rem;
+    a {
+      width: 8.5rem;
+      height: 2.25rem;
+      line-height: 2.25rem;
+      border-radius: 2.25rem;
+    }
   }
 }
 
@@ -214,13 +394,28 @@ section {
     }
   }
 
-  // banner
-  .works-banner {
-    min-height: 70vh;
+  .works-banner-wrap {
+    height: auto;
+    background: none;
+  }
 
-    img {
-      width: 15rem;
-    }
+  .works-banner-inner {
+    width: 100%;
+  }
+
+  .banner-link-btn {
+    height: auto;
+  }
+
+  .project-title-wrap {
+    height: 50vh;
+    margin-bottom: 0;
+    background: linear-gradient(rgba(12, 12, 12, 0.5), #1a181b),
+      url("../assets/image/works/works-image_01.jpg") no-repeat center / cover;
+  }
+
+  .project-info-wrap {
+    width: 85vw;
   }
 }
 </style>

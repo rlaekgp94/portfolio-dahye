@@ -244,6 +244,10 @@ export default {
     padding: 7rem 0 4rem;
   }
 
+  .contact-wrap {
+    width: 90vw;
+  }
+
   .contact-title {
     margin-bottom: 3rem;
 
