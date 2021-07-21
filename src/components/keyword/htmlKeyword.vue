@@ -17,11 +17,4 @@
   text-align: center;
   line-height: 1.65rem;
 }
-
-// tablet
-@media screen and (max-width: 1024px) {
-  .keyword-wrap {
-    font-size: 1rem;
-  }
-}
 </style>

@@ -5,11 +5,10 @@
 </template>
 
 <style lang="scss" scoped>
-//수정
 footer {
-  background: rgb(51, 51, 51);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   width: 100%;
   height: 7rem;
   display: flex;

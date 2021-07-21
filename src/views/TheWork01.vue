@@ -29,29 +29,35 @@
             />
           </div>
           <div class="banner-link-btn">
-            <a href="#">Github</a>
-            <a href="#">Demo</a>
+            <a
+              href="https://github.com/rlaekgp94/dahye-kim/tree/master/%5B0%5D%20redesign"
+              target="_blank"
+              >Github</a
+            >
+            <a href="https://renewal-printbakery.netlify.app" target="_blank"
+              >Demo</a
+            >
           </div>
         </div>
 
         <div class="project-info-wrap">
           <ul>
             <li class="info">
-              <h2>Project type</h2>
+              <h2>프로젝트 타입</h2>
               <div>
-                <p>Renewal Project</p>
-                <p>Responsive Website</p>
+                <p>리뉴얼 프로젝트</p>
+                <p>반응형 웹 제작</p>
               </div>
             </li>
             <li class="info">
-              <h2>Personal Project</h2>
+              <h2>프로젝트 기여도</h2>
               <div>
-                <p>Design 100%</p>
-                <p>publishing 100%</p>
+                <p>디자인 100%</p>
+                <p>퍼블리싱 100%</p>
               </div>
             </li>
             <li class="info">
-              <h2>Keyword</h2>
+              <h2>키워드</h2>
               <div class="keyword-wrap">
                 <HTML class="keyword" /><CSS3 class="keyword" /><JQUERY
                   class="keyword"
@@ -59,14 +65,52 @@
               </div>
             </li>
             <li class="info">
-              <h2>Open source used</h2>
+              <h2>프로젝트 구성</h2>
               <div>
-                <p>Swiper.js</p>
-                <p>Pullpage.js</p>
+                <p>메인 1P</p>
+                <p>서브페이지 1P</p>
               </div>
             </li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="works-about-wrap">
+      <div class="layout">
+        <img
+          src="@/assets/image/works/work01/work01-main-banner.jpg"
+          alt="프린트베이커리 메인배너"
+          class="image-border"
+        />
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work01/work01-mobile-slidemenu.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout">
+        <img
+          src="@/assets/image/works/work01/work01-about-banner.jpg"
+          alt="프린트베이커리 about 페이지"
+          class="image-border"
+        />
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work01/work01-mobile-about.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout-all">
+        <img
+          src="@/assets/image/works/work01/work01-main-all-80.jpg"
+          alt="프린트베이커리 메인전체"
+          class="image-border-all"
+        />
       </div>
     </section>
   </div>
@@ -271,10 +315,12 @@ section {
 
     p {
       font-size: 0.8rem;
+      font-weight: 500;
     }
 
     padding: 2rem 0;
     border-bottom: 0.05rem solid rgba(255, 255, 255, 0.5);
+    font-family: "ELAND_Choice_M", sans-serif;
   }
 }
 
@@ -317,6 +363,50 @@ section {
     display: block;
     border-radius: 2rem;
   }
+}
+
+// works-about
+
+.works-about-wrap {
+  width: 90vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.image-border {
+  width: 55rem;
+  height: 28.5rem;
+  border-radius: 0.5rem;
+}
+
+.image-border-all {
+  height: auto;
+  border-radius: 0.5rem;
+  width: 80%;
+}
+
+.video-border {
+  border-radius: 0.5rem;
+}
+
+.layout-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 5rem;
+}
+
+.layout {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 0;
 }
 
 // tablet
@@ -409,6 +499,19 @@ section {
 
   .project-info-wrap {
     width: 85vw;
+
+    ul li {
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      padding: 1.5rem 0;
+    }
   }
 
   .keyword-wrap {

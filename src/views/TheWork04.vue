@@ -30,29 +30,32 @@
             </svg>
           </div>
           <div class="banner-link-btn">
-            <a href="#">Github</a>
-            <a href="#">Demo</a>
+            <a
+              href="https://github.com/rlaekgp94/clone-laftel-v2"
+              target="_blank"
+              >Github</a
+            >
+            <a href="https://clone-laftel.netlify.app" target="_blank">Demo</a>
           </div>
         </div>
 
         <div class="project-info-wrap">
           <ul>
             <li class="info">
-              <h2>Project type</h2>
+              <h2>프로젝트 타입</h2>
               <div>
-                <p>Clone Project</p>
-                <p>Responsive Website</p>
+                <p>클론코딩 프로젝트</p>
+                <p>반응형 웹 제작</p>
               </div>
             </li>
             <li class="info">
-              <h2>Team Project</h2>
+              <h2>프로젝트 기여도</h2>
               <div>
-                <p>Design 100%</p>
-                <p>publishing 100%</p>
+                <p>퍼블리싱 100%</p>
               </div>
             </li>
             <li class="info">
-              <h2>Keyword</h2>
+              <h2>키워드</h2>
               <div class="keyword-wrap">
                 <VUE class="keyword" /><CSS3 class="keyword" /><JQUERY
                   class="keyword"
@@ -60,13 +63,83 @@
               </div>
             </li>
             <li class="info">
-              <h2>Open source used</h2>
+              <h2>프로젝트 구성</h2>
               <div>
-                <p>Swiper.js</p>
+                <p>메인 1P</p>
+                <p>서브페이지 6P</p>
               </div>
             </li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="works-about-wrap">
+      <div class="layout">
+        <img
+          src="@/assets/image/works/work04/work04-main-banner.jpg"
+          alt="라프텔 메인배너"
+          class="image-border"
+        />
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work04/work04-main-mobile-slidemenu.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout">
+        <video muted autoplay loop class="video-border video-resize">
+          <source
+            src="@/assets/image/works/work04/work04-main-slide.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work04/work04-main-mobile-slide.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout">
+        <video muted autoplay loop class="resize-layout03">
+          <source
+            src="@/assets/image/works/work04/work04-main-mobile-login-wrap.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video muted autoplay loop class="resize-layout03">
+          <source
+            src="@/assets/image/works/work04/work04-main-mobile-snslogin.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout">
+        <img
+          src="@/assets/image/works/work04/work04-login.jpg"
+          alt="라프텔 로그인페이지"
+          class="resize-layout03"
+        />
+        <video muted autoplay loop class="resize-layout03">
+          <source
+            src="@/assets/image/works/work04/work04-main-mobile-login.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout-all">
+        <img
+          src="@/assets/image/works/work04/work04-main-all.jpg"
+          alt="라프텔 메인전체"
+          class="image-border-all"
+        />
       </div>
     </section>
   </div>
@@ -264,10 +337,12 @@ section {
 
     p {
       font-size: 0.8rem;
+      font-weight: 500;
     }
 
     padding: 2rem 0;
     border-bottom: 0.05rem solid rgba(255, 255, 255, 0.5);
+    font-family: "ELAND_Choice_M";
   }
 }
 
@@ -312,6 +387,59 @@ section {
   }
 }
 
+// works-about
+
+.works-about-wrap {
+  width: 90vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.image-border {
+  width: 55rem;
+  height: 28.5rem;
+  border-radius: 0.5rem;
+}
+
+.image-border-all {
+  height: auto;
+  border-radius: 0.5rem;
+  width: 80%;
+}
+
+.video-border {
+  border-radius: 0.5rem;
+}
+
+.video-resize {
+  width: 65%;
+}
+
+.resize-layout03 {
+  border-radius: 0.5rem;
+  width: 22.5%;
+}
+
+.layout-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 5rem;
+}
+
+.layout {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 0;
+}
+
 // tablet
 @media screen and (max-width: 1024px) {
   .nav-inner {
@@ -346,6 +474,11 @@ section {
     p {
       font-size: 1rem;
       margin-bottom: 1rem;
+    }
+    svg {
+      fill: #fff;
+      transform: scale(4.25);
+      margin: 2rem 0;
     }
   }
 
@@ -406,6 +539,19 @@ section {
 
   .project-info-wrap {
     width: 85vw;
+
+    ul li {
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      padding: 1.5rem 0;
+    }
   }
 
   .keyword-wrap {

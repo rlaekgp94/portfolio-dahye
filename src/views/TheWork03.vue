@@ -40,29 +40,30 @@
             </div>
           </div>
           <div class="banner-link-btn">
-            <a href="#">Github</a>
-            <a href="#">Demo</a>
+            <a href="https://github.com/rlaekgp94/clone-samhwa" target="_blank"
+              >Github</a
+            >
+            <a href="https://clone-samhwa.netlify.app" target="_blank">Demo</a>
           </div>
         </div>
 
         <div class="project-info-wrap">
           <ul>
             <li class="info">
-              <h2>Project type</h2>
+              <h2>프로젝트 타입</h2>
               <div>
-                <p>Clone Project</p>
-                <p>Only Web</p>
+                <p>클론코딩 팀 프로젝트</p>
+                <p>웹 제작</p>
               </div>
             </li>
             <li class="info">
-              <h2>Team Project</h2>
+              <h2>프로젝트 기여도</h2>
               <div>
-                <p>Design 100%</p>
-                <p>publishing 100%</p>
+                <p>자세한 내용 상세페이지 참조</p>
               </div>
             </li>
             <li class="info">
-              <h2>Keyword</h2>
+              <h2>키워드</h2>
               <div class="keyword-wrap">
                 <VUE class="keyword" /><CSS3 class="keyword" /><JQUERY
                   class="keyword"
@@ -70,13 +71,42 @@
               </div>
             </li>
             <li class="info">
-              <h2>Open source used</h2>
+              <h2>프로젝트 구성</h2>
               <div>
-                <p>Swiper.js</p>
+                <p>메인 1P</p>
               </div>
             </li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="works-about-wrap">
+      <div class="layout">
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work03/work03-header.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout">
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work03/work03-color.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout">
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work03/work03-slide.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
     </section>
   </div>
@@ -285,15 +315,17 @@ section {
 
     p {
       font-size: 0.8rem;
+      font-weight: 500;
     }
 
     padding: 2rem 0;
     border-bottom: 0.05rem solid rgba(255, 255, 255, 0.5);
+    font-family: "ELAND_Choice_M";
   }
 }
 
 .info {
-  &:not(:nth-child(3)) {
+  &:first-child {
     div {
       p {
         width: 50%;
@@ -331,6 +363,31 @@ section {
     display: block;
     border-radius: 2rem;
   }
+}
+
+// works-about
+.works-about-wrap {
+  width: 90vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.video-border {
+  width: 70%;
+  border-radius: 0.5rem;
+}
+
+.layout {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
 }
 
 // tablet
@@ -424,6 +481,19 @@ section {
 
   .project-info-wrap {
     width: 85vw;
+
+    ul li {
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      padding: 1.5rem 0;
+    }
   }
 
   .keyword-wrap {

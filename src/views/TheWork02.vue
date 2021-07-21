@@ -33,29 +33,35 @@
             <img src="@/assets/image/works/marshall-logo.svg" alt="마쉘 로고" />
           </div>
           <div class="banner-link-btn">
-            <a href="#">Github</a>
-            <a href="#">Demo</a>
+            <a
+              href="https://github.com/rlaekgp94/renewal-marshall"
+              target="_blank"
+              >Github</a
+            >
+            <a href="https://renewal-marshall.netlify.app" target="_blank"
+              >Demo</a
+            >
           </div>
         </div>
 
         <div class="project-info-wrap">
           <ul>
             <li class="info">
-              <h2>Project type</h2>
+              <h2>프로젝트 타입</h2>
               <div>
-                <p>Renewal Project</p>
-                <p>Only Web</p>
+                <p>리뉴얼 프로젝트</p>
+                <p>웹 제작</p>
               </div>
             </li>
             <li class="info">
-              <h2>Personal Project</h2>
+              <h2>프로젝트 기여도</h2>
               <div>
-                <p>Design 100%</p>
-                <p>publishing 100%</p>
+                <p>디자인 100%</p>
+                <p>퍼블리싱 100%</p>
               </div>
             </li>
             <li class="info">
-              <h2>Keyword</h2>
+              <h2>키워드</h2>
               <div class="keyword-wrap">
                 <VUE class="keyword" /><CSS3 class="keyword" /><JQUERY
                   class="keyword"
@@ -63,13 +69,51 @@
               </div>
             </li>
             <li class="info">
-              <h2>Open source used</h2>
+              <h2>프로젝트 구성</h2>
               <div>
-                <p>Swiper.js</p>
+                <p>메인 1P</p>
+                <p>서브페이지 4P</p>
               </div>
             </li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="works-about-wrap">
+      <div class="layout">
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work02/work02-main-banner.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout">
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work02/work02-subpage-scroll.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout">
+        <video muted autoplay loop class="video-border">
+          <source
+            src="@/assets/image/works/work02/work02-subpage-slide.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="layout">
+        <img
+          src="@/assets/image/works/work02/work02-main-all.jpg"
+          alt="마샬 메인전체"
+          class="image-border-all"
+        />
       </div>
     </section>
   </div>
@@ -275,10 +319,12 @@ section {
 
     p {
       font-size: 0.8rem;
+      font-weight: 500;
     }
 
     padding: 2rem 0;
     border-bottom: 0.05rem solid rgba(255, 255, 255, 0.5);
+    font-family: "ELAND_Choice_M";
   }
 }
 
@@ -321,6 +367,44 @@ section {
     display: block;
     border-radius: 2rem;
   }
+}
+
+// works-about
+.works-about-wrap {
+  width: 90vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.image-border-all {
+  height: auto;
+  border-radius: 0.5rem;
+  width: 80%;
+}
+
+.video-border {
+  width: 70%;
+  border-radius: 0.5rem;
+}
+
+.layout-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 5rem;
+}
+
+.layout {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
 }
 
 // tablet
@@ -415,6 +499,19 @@ section {
 
   .project-info-wrap {
     width: 85vw;
+
+    ul li {
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      padding: 1.5rem 0;
+    }
   }
 
   .keyword-wrap {

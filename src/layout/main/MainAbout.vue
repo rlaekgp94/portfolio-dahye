@@ -25,9 +25,10 @@
       <div class="m-about-inner mobile">
         <p class="m-about-info">
           안녕하세요, 웹 퍼블리셔 김다혜입니다.<br /><br />
-          언제나 사용자의 관점에서 생각하며 열정적으로 소통하는 웹 퍼블리셔가
-          되고싶습니다. 컴포넌트 단위의 유지보수에 최적화된 마크업에 관심이
-          많습니다.
+          기획의 의도를 파악하는 것과 소통을 중요시 하는 웹 퍼블리셔가
+          되고싶습니다. 공부하는 자세로 많은 사이트를 접하고 코드를 분석하면
+          즐거운 자극이 되며 꾸준히 발전하고자 하는 마인드를 우선으로
+          생각합니다.
         </p>
 
         <div>
@@ -35,51 +36,48 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="slide-skill-box">
-                  <strong>Ul Development</strong>
+                  <strong>Markup &amp; CSS</strong>
                   <p>
-                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
-                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
-                    탄탄한 업무 프로세스를 지향합니다.
+                    퍼블리싱의 기본인 HTML, CSS를 이해하며 웹표준을 준수한
+                    코드로 접근성을 높입니다. 사용성과 유지보수를 고려한 코드
+                    작성을 목표로 합니다.
                   </p>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="slide-skill-box">
-                  <strong>Markup&design</strong>
+                  <strong>UI Design</strong>
                   <p>
-                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
-                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
-                    탄탄한 업무 프로세스를 지향합니다.
+                    기획서와 디자인을 보고 문서의 구성 요소들을 해석, 판단하여
+                    문서를 구조화시키는 과정을 중시합니다.
                   </p>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="slide-skill-box">
-                  <strong>co-work</strong>
+                  <strong>Work as one</strong>
                   <p>
-                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
-                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
-                    탄탄한 업무 프로세스를 지향합니다.
+                    원활한 협업을 위해 팀원들과 소통을 기본시하며 다같이 이상의
+                    성과를 창출하는것을 지향합니다.
                   </p>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="slide-skill-box">
-                  <strong>Skills</strong>
+                  <strong>Development</strong>
                   <p>
-                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
-                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
-                    탄탄한 업무 프로세스를 지향합니다.
+                    새로운 배움이라는 중요성, 스스로를 객관화하며 부족함을 찾아
+                    자기계발에 노력하는 자세를 가지고 있습니다.
                   </p>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="slide-skill-box">
-                  <strong>For Users</strong>
+                  <strong>Interaction</strong>
                   <p>
-                    웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.
-                    유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등
-                    탄탄한 업무 프로세스를 지향합니다.
+                    반응형 웹과 동적 UI 구현에 관심이 많습니다. 인터랙티브 웹
+                    구현을 위해 라이브러리의 동작원리를 이해하고 창의적인 기술을
+                    구사하기 위해 공부합니다.
                   </p>
                 </div>
               </div>
@@ -93,9 +91,9 @@
       <div class="about-inner web">
         <p class="about-info">
           안녕하세요, 웹 퍼블리셔 김다혜입니다.<br /><br />
-          언제나 사용자의 관점에서 생각하며 열정적으로 소통하는 웹 퍼블리셔가
-          되고싶습니다. 컴포넌트 단위의 유지보수에 최적화된 마크업에 관심이
-          많습니다.
+          기획의 의도를 파악하는 것과 소통을 중요시 하는 웹 퍼블리셔가 되고
+          싶습니다. 공부하는 자세로 많은 사이트를 접하고 코드를 분석하면 즐거운
+          자극이 되며 꾸준히 발전하고자 하는 마인드를 우선으로 생각합니다.
         </p>
 
         <div class="about-skills">
@@ -103,7 +101,7 @@
             <li>
               <div class="about-skill-more-btn">
                 <span>01</span>
-                <p class="delay01">Ul Development</p>
+                <p class="delay01">Markup &amp; CSS</p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -111,16 +109,16 @@
               </div>
 
               <div class="about-skill-more">
-                웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.<br />
-                유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
-                업무 프로세스를 지향합니다.
+                퍼블리싱의 기본인 HTML, CSS를 이해하며 웹표준을 준수한 코드로
+                접근성을 높입니다.<br />사용성과 유지보수를 고려한 코드 작성을
+                목표로 합니다.
               </div>
             </li>
 
             <li>
               <div class="about-skill-more-btn">
                 <span>02</span>
-                <p class="delay02">Markup & design</p>
+                <p class="delay02">UI Design</p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -128,16 +126,15 @@
               </div>
 
               <div class="about-skill-more">
-                웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.<br />
-                유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
-                업무 프로세스를 지향합니다.
+                기획서와 디자인을 보고 문서의 구성 요소들을 해석, 판단하여<br />
+                문서를 구조화시키는 과정을 중시합니다.
               </div>
             </li>
 
             <li>
               <div class="about-skill-more-btn">
                 <span>03</span>
-                <p class="delay03">co-work</p>
+                <p class="delay03">Work as one</p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -145,16 +142,15 @@
               </div>
 
               <div class="about-skill-more">
-                웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.<br />
-                유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
-                업무 프로세스를 지향합니다.
+                원활한 협업을 위해 팀원들과 소통을 기본시하며<br />다같이 이상의
+                성과를 창출하는것을 지향합니다.
               </div>
             </li>
 
             <li>
               <div class="about-skill-more-btn">
                 <span>04</span>
-                <p class="delay04">Skills</p>
+                <p class="delay04">Development</p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -162,16 +158,15 @@
               </div>
 
               <div class="about-skill-more">
-                웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.<br />
-                유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
-                업무 프로세스를 지향합니다.
+                새로운 배움이라는 중요성, 스스로를 객관화하며 부족함을 찾아<br />
+                자기계발에 노력하는 자세를 가지고 있습니다.
               </div>
             </li>
 
             <li>
               <div class="about-skill-more-btn">
                 <span>05</span>
-                <p class="delay05">For Users</p>
+                <p class="delay05">Interaction</p>
                 <img
                   src="@/assets/image/icons/down-arrow-icon.svg"
                   alt="더보기 아이콘"
@@ -179,9 +174,9 @@
               </div>
 
               <div class="about-skill-more">
-                웹 퍼블리싱HTML, CSS, JS을 빠삭하게 이해하며 잘 다룹니다.<br />
-                유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한
-                업무 프로세스를 지향합니다.
+                반응형 웹과 동적 UI 구현에 관심이 많습니다.<br />인터랙티브 웹
+                구현을 위해 라이브러리의 동작원리를 이해하고 창의적인 기술을
+                구사하기 위해 공부합니다.
               </div>
             </li>
           </ul>
@@ -335,6 +330,7 @@ $point: rgb(175, 0, 0);
   line-height: 1.5rem;
   font-size: 0.85rem;
   width: 25vw;
+  font-family: "ELAND_Choice_M", sans-serif;
 }
 
 .about-skills {
@@ -385,6 +381,7 @@ $point: rgb(175, 0, 0);
   line-height: 1.5rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
+  font-family: "ELAND_Choice_M", sans-serif;
 }
 
 // mobile
@@ -435,6 +432,7 @@ $point: rgb(175, 0, 0);
     font-size: 0.875rem;
     line-height: 1.5rem;
     margin-bottom: 5rem;
+    font-family: "ELAND_Choice_M", sans-serif;
   }
 
   .swiper-container {
@@ -463,24 +461,29 @@ $point: rgb(175, 0, 0);
     width: 80%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
 
     strong {
+      margin-top: 2rem;
       font-size: 1rem;
       font-family: "Krona One", sans-serif;
     }
 
     p {
+      margin-bottom: 2rem;
       font-family: "ELAND_Choice_M", sans-serif;
       font-size: 0.875rem;
       line-height: 1.5rem;
     }
   }
-
-  .swiper-pagination {
-    text-align: right;
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-container-horizontal > .swiper-pagination-bullets {
     top: -3rem;
+    right: 1rem;
+    width: auto;
+    text-align: right;
   }
 }
 </style>

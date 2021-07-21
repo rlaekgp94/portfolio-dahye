@@ -89,9 +89,10 @@ export default {
   }
 
   h3 {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     line-height: 1.5rem;
     font-weight: 300;
+    font-family: "Syncopate", sans-serif;
   }
 }
 
@@ -110,7 +111,6 @@ export default {
   textarea {
     color: #fff;
     font-size: 0.875rem;
-    letter-spacing: 0.25rem;
     background: none;
     outline: none;
     border: none;
