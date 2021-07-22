@@ -77,40 +77,85 @@
     </section>
 
     <section class="works-about-wrap">
-      <div class="layout">
-        <img
-          src="@/assets/image/works/work01/work01-main-banner.jpg"
-          alt="프린트베이커리 메인배너"
-          class="image-border"
-        />
-        <video muted autoplay loop class="video-border">
-          <source
-            src="@/assets/image/works/work01/work01-mobile-slidemenu.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+      <aside class="works-aside">
+        <p>Contents</p>
+        <ul>
+          <li><a href="#mainpage">메인 페이지</a></li>
+          <li><a href="#subpage">서브 페이지</a></li>
+          <li><a href="#mainlayout">메인 레이아웃</a></li>
+        </ul>
+      </aside>
 
-      <div class="layout">
-        <img
-          src="@/assets/image/works/work01/work01-about-banner.jpg"
-          alt="프린트베이커리 about 페이지"
-          class="image-border"
-        />
-        <video muted autoplay loop class="video-border">
-          <source
-            src="@/assets/image/works/work01/work01-mobile-about.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+      <div class="works-about-inner">
+        <div id="mainpage" class="work-box">
+          <video muted autoplay loop class="web-border">
+            <source
+              src="@/assets/image/works/work01/work01-main-banner.mp4"
+              type="video/mp4"
+            />
+          </video>
 
-      <div class="layout-all">
-        <img
-          src="@/assets/image/works/work01/work01-main-all-80.jpg"
-          alt="프린트베이커리 메인전체"
-          class="image-border-all"
-        />
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>마이페이지 네비게이션 드로어 / 아코디언 메뉴</p>
+          </div>
+        </div>
+
+        <div class="work-box">
+          <video muted autoplay loop class="phone-border">
+            <source
+              src="@/assets/image/works/work01/work01-mobile-slidemenu.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="work-info">
+            <strong>Mobile</strong>
+            <p>글로벌 네비게이션 드로어</p>
+          </div>
+        </div>
+
+        <div id="subpage" class="work-box">
+          <img
+            src="@/assets/image/works/work01/work01-about-banner.jpg"
+            alt="프린트베이커리 about 페이지"
+            class="web-border"
+          />
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>About 페이지</p>
+          </div>
+        </div>
+
+        <div class="work-box">
+          <video muted autoplay loop class="phone-border">
+            <source
+              src="@/assets/image/works/work01/work01-mobile-about.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="work-info">
+            <strong>Mobile</strong>
+            <p>
+              About 페이지<br /><span
+                >사용된 라이브러리 : fullpage.js, Aos.js</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div id="mainlayout" class="work-box">
+          <img
+            src="@/assets/image/works/work01/work01-main-all-80.jpg"
+            alt="프린트베이커리 메인전체"
+            class="web-border"
+          />
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>Home 전체 레이아웃</p>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -139,6 +184,16 @@ export default {
             "invert(21%) sepia(92%) saturate(3685%) hue-rotate(224deg) brightness(92%) contrast(108%)"
         });
       }
+    });
+
+    $("a").click(function () {
+      $("html, body").animate(
+        {
+          scrollTop: $($.attr(this, "href")).offset().top
+        },
+        500
+      );
+      return false;
     });
   },
   components: {
@@ -219,7 +274,6 @@ header {
 #work-section {
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 
 .fixed-link-btn {
@@ -250,7 +304,7 @@ section {
 }
 
 .works-banner-wrap {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(12, 12, 12, 0.5), #1a181b),
     url("../assets/image/works/works-image_01.jpg") no-repeat center / cover;
@@ -371,42 +425,91 @@ section {
   width: 90vw;
   height: auto;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 5rem 0;
-}
-
-.image-border {
-  width: 55rem;
-  height: 28.5rem;
-  border-radius: 0.5rem;
-}
-
-.image-border-all {
-  height: auto;
-  border-radius: 0.5rem;
-  width: 80%;
-}
-
-.video-border {
-  border-radius: 0.5rem;
-}
-
-.layout-all {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10rem 5rem;
-}
-
-.layout {
-  width: 100%;
-  height: auto;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10rem 0;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+.works-aside {
+  width: auto;
+  height: 10rem;
+  position: sticky;
+  top: 5rem;
+  left: 0;
+  padding-top: 5rem;
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    &::before {
+      content: "";
+      width: 1.5rem;
+      height: 0.15rem;
+      background: #fff;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+
+  ul {
+    font-family: "ELAND_Choice_M", sans-serif;
+    text-indent: 2rem;
+    margin-top: 2rem;
+    li {
+      line-height: 1.5rem;
+      &:hover {
+        font-style: underline;
+      }
+      a {
+        color: #fff;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.works-about-inner {
+  width: 70%;
+  height: 100%;
+}
+
+.work-box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+
+.work-info {
+  font-family: "Arial", sans-serif;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  line-height: 1.25rem;
+  strong {
+    font-size: 1rem;
+    font-family: "Arial", sans-serif;
+    margin-right: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+    font-family: "ELAND_Choice_M", sans-serif;
+    span {
+      color: rgba(255, 255, 255, 0.603);
+    }
+  }
+}
+
+.web-border {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.phone-border {
+  width: 30%;
+  border-radius: 0.5rem;
 }
 
 // tablet
