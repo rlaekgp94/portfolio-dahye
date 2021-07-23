@@ -61,7 +61,7 @@
               <div class="keyword-wrap">
                 <HTML class="keyword" /><CSS3 class="keyword" /><JQUERY
                   class="keyword"
-                /><JS class="keyword" />
+                />
               </div>
             </li>
             <li class="info">
@@ -97,7 +97,12 @@
 
           <div class="work-info">
             <strong>Web</strong>
-            <p>마이페이지 네비게이션 드로어 / 아코디언 메뉴</p>
+            <p>
+              - 마이페이지 네비게이션 드로어 / 아코디언 메뉴<br />
+              - Main 자동 슬라이드 배너<br /><span
+                >사용된 라이브러리 : swiper.js</span
+              >
+            </p>
           </div>
         </div>
 
@@ -111,7 +116,12 @@
 
           <div class="work-info">
             <strong>Mobile</strong>
-            <p>글로벌 네비게이션 드로어</p>
+            <p>
+              - 글로벌 네비게이션 드로어<br />
+              - Main 자동 슬라이드 배너<br /><span
+                >사용된 라이브러리 : swiper.js</span
+              >
+            </p>
           </div>
         </div>
 
@@ -123,7 +133,11 @@
           />
           <div class="work-info">
             <strong>Web</strong>
-            <p>About 페이지</p>
+            <p>
+              About 페이지<br /><span
+                >사용된 라이브러리 : fullpage.js, Aos.js</span
+              >
+            </p>
           </div>
         </div>
 
@@ -199,8 +213,7 @@ export default {
   components: {
     HTML: () => import("@/components/keyword/htmlKeyword.vue"),
     CSS3: () => import("@/components/keyword/cssKeyword.vue"),
-    JQUERY: () => import("@/components/keyword/jqueryKeyword.vue"),
-    JS: () => import("@/components/keyword/jsKeyword.vue")
+    JQUERY: () => import("@/components/keyword/jqueryKeyword.vue")
   }
 };
 </script>
@@ -420,7 +433,6 @@ section {
 }
 
 // works-about
-
 .works-about-wrap {
   width: 90vw;
   height: auto;
@@ -436,7 +448,7 @@ section {
   position: sticky;
   top: 5rem;
   left: 0;
-  padding-top: 5rem;
+  padding-top: 8rem;
   p {
     font-size: 1.5rem;
     font-weight: bold;
@@ -460,12 +472,12 @@ section {
     margin-top: 2rem;
     li {
       line-height: 1.5rem;
-      &:hover {
-        font-style: underline;
-      }
       a {
         color: #fff;
         font-size: 0.8rem;
+        &:hover {
+          border-bottom: 1px solid #fff;
+        }
       }
     }
   }
@@ -479,7 +491,7 @@ section {
 .work-box {
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
+  padding-top: 8rem;
 }
 
 .work-info {
@@ -533,7 +545,7 @@ section {
     width: 60%;
     ul li {
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
 
       p {
@@ -557,6 +569,43 @@ section {
       line-height: 2.25rem;
       border-radius: 2.25rem;
     }
+  }
+
+  // works-about
+  .works-about-wrap {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .works-aside {
+    position: static;
+    height: auto;
+
+    p {
+      font-size: 2rem;
+      &::before {
+        display: none;
+      }
+    }
+    ul {
+      display: none;
+    }
+  }
+
+  .works-about-inner {
+    width: 100%;
+  }
+
+  .work-box {
+    align-items: center;
+    padding-top: 7.5rem;
+    &:first-child {
+      padding-top: 5rem;
+    }
+  }
+
+  .phone-border {
+    width: 40%;
   }
 }
 
@@ -617,14 +666,8 @@ section {
     }
   }
 
-  .keyword-wrap {
-    display: flex;
-    justify-content: space-between;
-    .keyword {
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-    }
+  .phone-border {
+    width: 50%;
   }
 }
 </style>

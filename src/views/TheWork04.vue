@@ -44,7 +44,7 @@
             <li class="info">
               <h2>프로젝트 타입</h2>
               <div>
-                <p>클론코딩 프로젝트</p>
+                <p>클론 프로젝트</p>
                 <p>반응형 웹 제작</p>
               </div>
             </li>
@@ -57,7 +57,7 @@
             <li class="info">
               <h2>키워드</h2>
               <div class="keyword-wrap">
-                <VUE class="keyword" /><CSS3 class="keyword" /><JQUERY
+                <VUE class="keyword" /><SCSS class="keyword" /><JQUERY
                   class="keyword"
                 /><JS class="keyword" />
               </div>
@@ -75,71 +75,156 @@
     </section>
 
     <section class="works-about-wrap">
-      <div class="layout">
-        <img
-          src="@/assets/image/works/work04/work04-main-banner.jpg"
-          alt="라프텔 메인배너"
-          class="image-border"
-        />
-        <video muted autoplay loop class="video-border">
-          <source
-            src="@/assets/image/works/work04/work04-main-mobile-slidemenu.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+      <aside class="works-aside">
+        <p>Contents</p>
+        <ul>
+          <li><a href="#mainpage">메인 페이지</a></li>
+          <li><a href="#loginpage">로그인 페이지</a></li>
+          <li><a href="#mainlayout">메인 레이아웃</a></li>
+        </ul>
+      </aside>
 
-      <div class="layout">
-        <video muted autoplay loop class="video-border video-resize">
-          <source
-            src="@/assets/image/works/work04/work04-main-slide.mp4"
-            type="video/mp4"
+      <div class="works-about-inner">
+        <div id="mainpage" class="work-box">
+          <img
+            src="@/assets/image/works/work04/work04-main-banner.jpg"
+            alt="라프텔 메인배너"
+            class="web-border"
           />
-        </video>
 
-        <video muted autoplay loop class="video-border">
-          <source
-            src="@/assets/image/works/work04/work04-main-mobile-slide.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>
+              Main 자동 슬라이드 배너<br /><span
+                >사용된 라이브러리 : swiper.js</span
+              >
+            </p>
+          </div>
+        </div>
 
-      <div class="layout">
-        <video muted autoplay loop class="resize-layout03">
-          <source
-            src="@/assets/image/works/work04/work04-main-mobile-login-wrap.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <video muted autoplay loop class="resize-layout03">
-          <source
-            src="@/assets/image/works/work04/work04-main-mobile-snslogin.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+        <div class="work-box">
+          <video muted autoplay loop class="phone-border">
+            <source
+              src="@/assets/image/works/work04/work04-main-mobile-slidemenu.mp4"
+              type="video/mp4"
+            />
+          </video>
 
-      <div class="layout">
-        <img
-          src="@/assets/image/works/work04/work04-login.jpg"
-          alt="라프텔 로그인페이지"
-          class="resize-layout03"
-        />
-        <video muted autoplay loop class="resize-layout03">
-          <source
-            src="@/assets/image/works/work04/work04-main-mobile-login.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+          <div class="work-info">
+            <strong>Mobile</strong>
+            <p>
+              - 글로벌 네비게이션 드로어<br />
+              - Main 자동 슬라이드 배너<br /><span
+                >사용된 라이브러리 : swiper.js, click-outside</span
+              >
+            </p>
+          </div>
+        </div>
 
-      <div class="layout-all">
-        <img
-          src="@/assets/image/works/work04/work04-main-all.jpg"
-          alt="라프텔 메인전체"
-          class="image-border-all"
-        />
+        <div class="work-box">
+          <video muted autoplay loop class="web-border">
+            <source
+              src="@/assets/image/works/work04/work04-main-slide.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>
+              - Main 애니메이션 리스트 슬라이드<br />
+              -
+              <a
+                href="https://github.com/rlaekgp94/clone-laftel-v2/blob/master/app/src/assets/data/laftelslide.json"
+                >json파일</a
+              >을 작성해서 리스트렌더링을 하여 컴포넌트를 재사용하고 반복되는
+              코드를 최소화 하였습니다.<br />
+              - 슬라이드 라이브러리를 커스텀하였습니다.<br />
+              <span>사용된 라이브러리 : Swiper.js</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="work-box">
+          <video muted autoplay loop class="phone-border">
+            <source
+              src="@/assets/image/works/work04/work04-main-mobile-slide.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="work-info">
+            <strong>Mobile</strong>
+            <p>
+              - Main 애니메이션 리스트 슬라이드<br />
+              - 반응형에 최적화된 슬라이드를 구현하였습니다.<br /><span
+                >사용된 라이브러리 : Swiper.js</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div id="loginpage" class="work-box">
+          <div class="work-box-inner">
+            <video muted autoplay loop class="phone-border border-between">
+              <source
+                src="@/assets/image/works/work04/work04-main-mobile-login-wrap.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video muted autoplay loop class="phone-border">
+              <source
+                src="@/assets/image/works/work04/work04-main-mobile-snslogin.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+
+          <div class="work-info">
+            <strong>Mobile</strong>
+            <p>
+              - 로그인 첫화면 페이지<br />
+              - API 로그인 페이지
+            </p>
+          </div>
+        </div>
+
+        <div class="work-box">
+          <div class="work-box-inner">
+            <img
+              src="@/assets/image/works/work04/work04-login.jpg"
+              alt="라프텔 로그인페이지"
+              class="phone-border border-between"
+            />
+
+            <video muted autoplay loop class="phone-border">
+              <source
+                src="@/assets/image/works/work04/work04-main-mobile-login.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+
+          <div class="work-info">
+            <strong>Mobile</strong>
+            <p>
+              - Email Login 페이지<br />
+              - 회원가입 페이지
+            </p>
+          </div>
+        </div>
+
+        <div id="mainlayout" class="work-box">
+          <img
+            src="@/assets/image/works/work04/work04-main-all.jpg"
+            alt="라프텔 메인전체"
+            class="web-border"
+          />
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>Home 전체 레이아웃</p>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -169,10 +254,20 @@ export default {
         });
       }
     });
+
+    $("a").click(function () {
+      $("html, body").animate(
+        {
+          scrollTop: $($.attr(this, "href")).offset().top
+        },
+        500
+      );
+      return false;
+    });
   },
   components: {
     VUE: () => import("@/components/keyword/vueKeyword.vue"),
-    CSS3: () => import("@/components/keyword/cssKeyword.vue"),
+    SCSS: () => import("@/components/keyword/scssKeyword.vue"),
     JQUERY: () => import("@/components/keyword/jqueryKeyword.vue"),
     JS: () => import("@/components/keyword/jsKeyword.vue")
   }
@@ -241,7 +336,6 @@ header {
 #work-section {
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 
 .fixed-link-btn {
@@ -272,7 +366,7 @@ section {
 }
 
 .works-banner-wrap {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(12, 12, 12, 0.75), #1a181b),
     url("https://image.laftel.net/carousel/final_gear_W_210525.jpg?Expires=1622063357&Signature=hy6boV6H3GlQJf1xyG-nvBizC9Vr8aGsHcOiSkGL4-GZYezu62INcIYgmQfUoYzoN6wZww2vSC3MZFHrfubC2qEJF5G2PlZfiKbdphedtcA8GgU5g8RoxARPCJKWbnaQVGASkx7Lgj4Iy4FhjO-58FpVrXLswrlc6IEOVKC0m4dqFu7~DYejxqXIZq6tnbIs0FBFZSAagGJ360zrUpazU1PaZPWZD0oHca5Aua9zOwuLD5b~AQuZ5GnN-29uv2HyZrwovYYoIGXufj2jL02-5w8x4rOtDk-9F0cggpAZIYT3vGpIhC-G23wScJG6PJWiXKeSxa32JufqHItwwsgAUg__&Key-Pair-Id=APKAJMMAKL567BYWKQ5A")
@@ -388,56 +482,106 @@ section {
 }
 
 // works-about
-
 .works-about-wrap {
   width: 90vw;
   height: auto;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 5rem 0;
-}
-
-.image-border {
-  width: 55rem;
-  height: 28.5rem;
-  border-radius: 0.5rem;
-}
-
-.image-border-all {
-  height: auto;
-  border-radius: 0.5rem;
-  width: 80%;
-}
-
-.video-border {
-  border-radius: 0.5rem;
-}
-
-.video-resize {
-  width: 65%;
-}
-
-.resize-layout03 {
-  border-radius: 0.5rem;
-  width: 22.5%;
-}
-
-.layout-all {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10rem 5rem;
-}
-
-.layout {
-  width: 100%;
-  height: auto;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10rem 0;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+.works-aside {
+  width: auto;
+  height: 10rem;
+  position: sticky;
+  top: 5rem;
+  left: 0;
+  padding-top: 8rem;
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    &::before {
+      content: "";
+      width: 1.5rem;
+      height: 0.15rem;
+      background: #fff;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+
+  ul {
+    font-family: "ELAND_Choice_M", sans-serif;
+    text-indent: 2rem;
+    margin-top: 2rem;
+    li {
+      line-height: 1.5rem;
+      a {
+        color: #fff;
+        font-size: 0.8rem;
+        &:hover {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+  }
+}
+
+.works-about-inner {
+  width: 70%;
+  height: 100%;
+}
+
+.work-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 8rem;
+}
+
+.work-box-inner {
+  .border-between {
+    margin-right: 5rem;
+  }
+}
+
+.work-info {
+  font-family: "Arial", sans-serif;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  line-height: 1.25rem;
+  strong {
+    font-size: 1rem;
+    font-family: "Arial", sans-serif;
+    margin-right: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+    font-family: "ELAND_Choice_M", sans-serif;
+    span {
+      color: rgba(255, 255, 255, 0.603);
+    }
+    a {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+.web-border {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.phone-border {
+  width: 30%;
+  border-radius: 0.5rem;
 }
 
 // tablet
@@ -491,6 +635,50 @@ section {
       line-height: 2.25rem;
       border-radius: 2.25rem;
     }
+  }
+
+  // works-about
+  .works-about-wrap {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .works-aside {
+    position: static;
+    height: auto;
+
+    p {
+      font-size: 2rem;
+      &::before {
+        display: none;
+      }
+    }
+    ul {
+      display: none;
+    }
+  }
+
+  .works-about-inner {
+    width: 100%;
+  }
+
+  .work-box {
+    align-items: center;
+    padding-top: 7.5rem;
+    &:first-child {
+      padding-top: 5rem;
+    }
+  }
+
+  .work-box-inner {
+    display: flex;
+    justify-content: space-around;
+    .border-between {
+      margin-right: 0;
+    }
+  }
+  .phone-border {
+    width: 40%;
   }
 }
 
@@ -562,6 +750,20 @@ section {
         margin-right: 0;
       }
     }
+  }
+
+  .work-box-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .border-between {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .phone-border {
+    width: 50%;
   }
 }
 </style>

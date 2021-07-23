@@ -52,14 +52,14 @@
             <li class="info">
               <h2>프로젝트 타입</h2>
               <div>
-                <p>클론코딩 팀 프로젝트</p>
+                <p>클론 팀프로젝트</p>
                 <p>웹 제작</p>
               </div>
             </li>
             <li class="info">
               <h2>프로젝트 기여도</h2>
               <div>
-                <p>자세한 내용 상세페이지 참조</p>
+                <p>Header, Footer, 3 Section</p>
               </div>
             </li>
             <li class="info">
@@ -82,31 +82,90 @@
     </section>
 
     <section class="works-about-wrap">
-      <div class="layout">
-        <video muted autoplay loop class="video-border">
-          <source
-            src="@/assets/image/works/work03/work03-header.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+      <aside class="works-aside">
+        <p>Contents</p>
+        <ul>
+          <li><a href="#header">Header</a></li>
+          <li><a href="#section01">Section01</a></li>
+          <li><a href="#section02">Section02</a></li>
+          <li><a href="#section03">Section03</a></li>
+          <li><a href="#footer">Footer</a></li>
+        </ul>
+      </aside>
 
-      <div class="layout">
-        <video muted autoplay loop class="video-border">
-          <source
-            src="@/assets/image/works/work03/work03-color.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+      <div class="works-about-inner">
+        <div id="header" class="work-box">
+          <video muted autoplay loop class="web-border">
+            <source
+              src="@/assets/image/works/work03/work03-header.mp4"
+              type="video/mp4"
+            />
+          </video>
 
-      <div class="layout">
-        <video muted autoplay loop class="video-border">
-          <source
-            src="@/assets/image/works/work03/work03-slide.mp4"
-            type="video/mp4"
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>- Header 스크롤이나 마우스오버시 이벤트 발생</p>
+          </div>
+        </div>
+
+        <div id="section01" class="work-box">
+          <video muted autoplay loop class="web-border">
+            <source
+              src="@/assets/image/works/work03/work03-color.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>
+              - Section01 컬러칩 버튼 클릭시 모달팝업<br />
+              <span
+                >Json파일을 작성하여 리스트렌더링을 하였고 클릭한 index 컬러의
+                해당하는 컬러모달창이 노출됩니다.</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div id="section02" class="work-box">
+          <video muted autoplay loop class="web-border">
+            <source
+              src="@/assets/image/works/work03/work03-slide.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>- Section02 Jquery를 이용하여 슬라이드 구현</p>
+          </div>
+        </div>
+
+        <div id="section03" class="work-box">
+          <img
+            src="@/assets/image/works/work03/work03-section03.jpg"
+            alt="삼화페인트 section03"
+            class="web-border"
           />
-        </video>
+
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>- Section03</p>
+          </div>
+        </div>
+
+        <div id="footer" class="work-box">
+          <img
+            src="@/assets/image/works/work03/work03-footer.jpg"
+            alt="삼화페인트 footer"
+            class="web-border"
+          />
+
+          <div class="work-info">
+            <strong>Web</strong>
+            <p>- Footer</p>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -135,6 +194,16 @@ export default {
             "invert(21%) sepia(92%) saturate(3685%) hue-rotate(224deg) brightness(92%) contrast(108%)"
         });
       }
+    });
+
+    $("a").click(function () {
+      $("html, body").animate(
+        {
+          scrollTop: $($.attr(this, "href")).offset().top
+        },
+        500
+      );
+      return false;
     });
   },
   components: {
@@ -211,7 +280,6 @@ header {
 #work-section {
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 
 .fixed-link-btn {
@@ -248,7 +316,7 @@ section {
 }
 
 .works-banner-wrap {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(12, 12, 12, 0.75), #1a181b),
     url("http://www.samhwa.com/files/editor/upload/1622527929397_15.png")
@@ -370,24 +438,86 @@ section {
   width: 90vw;
   height: auto;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 5rem 0;
+  padding-bottom: 5rem;
 }
 
-.video-border {
+.works-aside {
+  width: auto;
+  height: 10rem;
+  position: sticky;
+  top: 5rem;
+  left: 0;
+  padding-top: 8rem;
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    &::before {
+      content: "";
+      width: 1.5rem;
+      height: 0.15rem;
+      background: #fff;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+
+  ul {
+    font-family: "ELAND_Choice_M", sans-serif;
+    text-indent: 2rem;
+    margin-top: 2rem;
+    li {
+      line-height: 1.5rem;
+      a {
+        color: #fff;
+        font-size: 0.8rem;
+        &:hover {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+  }
+}
+
+.works-about-inner {
   width: 70%;
-  border-radius: 0.5rem;
+  height: 100%;
 }
 
-.layout {
-  width: 100%;
-  height: auto;
+.work-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10rem 0;
+  flex-direction: column;
+  padding-top: 8rem;
+}
+
+.work-info {
+  font-family: "Arial", sans-serif;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  line-height: 1.25rem;
+  strong {
+    font-size: 1rem;
+    font-family: "Arial", sans-serif;
+    margin-right: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+    font-family: "ELAND_Choice_M", sans-serif;
+    span {
+      color: rgba(255, 255, 255, 0.603);
+    }
+  }
+}
+
+.web-border {
+  width: 100%;
+  border-radius: 0.5rem;
 }
 
 // tablet
@@ -432,6 +562,39 @@ section {
       height: 2.25rem;
       line-height: 2.25rem;
       border-radius: 2.25rem;
+    }
+  }
+
+  // works-about
+  .works-about-wrap {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .works-aside {
+    position: static;
+    height: auto;
+
+    p {
+      font-size: 2rem;
+      &::before {
+        display: none;
+      }
+    }
+    ul {
+      display: none;
+    }
+  }
+
+  .works-about-inner {
+    width: 100%;
+  }
+
+  .work-box {
+    align-items: center;
+    padding-top: 7.5rem;
+    &:first-child {
+      padding-top: 5rem;
     }
   }
 }
