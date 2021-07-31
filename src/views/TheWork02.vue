@@ -103,7 +103,7 @@
             <strong>Web</strong>
             <p>
               - Main 자동 슬라이드 배너<br />
-              - 슬라이드 라이브러리를 커스텀하였습니다.
+              - 슬라이드 라이브러리를 커스텀하였습니다.<br />
               <span>사용된 라이브러리 : swiper.js</span>
             </p>
           </div>
@@ -141,6 +141,8 @@
               -
               <a
                 href="https://github.com/rlaekgp94/renewal-marshall/blob/master/src/assets/data/storeHeadPhones.json"
+                target="_blank"
+                title="사용된 json파일 보기"
                 >Json파일</a
               >을 작성하여 V-for을 사용해 리스트 렌더링을 하였습니다.
               <br /><span>사용된 라이브러리 : Swiper.js</span>
@@ -189,7 +191,7 @@ export default {
       }
     });
 
-    $("a").click(function () {
+    $(".works-aside ul li a").click(function () {
       $("html, body").animate(
         {
           scrollTop: $($.attr(this, "href")).offset().top

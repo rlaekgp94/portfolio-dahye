@@ -196,7 +196,7 @@ export default {
       }
     });
 
-    $("a").click(function () {
+    $(".works-aside ul li a").click(function () {
       $("html, body").animate(
         {
           scrollTop: $($.attr(this, "href")).offset().top

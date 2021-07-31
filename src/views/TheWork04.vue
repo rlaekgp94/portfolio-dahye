@@ -80,6 +80,7 @@
         <ul>
           <li><a href="#mainpage">메인 페이지</a></li>
           <li><a href="#loginpage">로그인 페이지</a></li>
+          <li><a href="#file">레이아웃 파일설계</a></li>
           <li><a href="#mainlayout">메인 레이아웃</a></li>
         </ul>
       </aside>
@@ -136,6 +137,8 @@
               -
               <a
                 href="https://github.com/rlaekgp94/clone-laftel-v2/blob/master/app/src/assets/data/laftelslide.json"
+                target="_blank"
+                title="사용된 json파일 보기"
                 >json파일</a
               >을 작성해서 리스트렌더링을 하여 컴포넌트를 재사용하고 반복되는
               코드를 최소화 하였습니다.<br />
@@ -214,6 +217,28 @@
           </div>
         </div>
 
+        <div id="file" class="work-box">
+          <div class="work-box-inner">
+            <a
+              href="https://drive.google.com/file/d/1Sccp85qAVvswZls88t5VPnsHKAMQ0yoI/view?usp=sharing"
+              target="_blank"
+              class="pdf_btn"
+              title="PDF 자세히 보기"
+              >VIEW PDF<img
+                src="@/assets/image/icons/link-icon.svg"
+                alt="링크 아이콘"
+            /></a>
+          </div>
+
+          <div class="work-info">
+            <strong>File Design</strong>
+            <p>
+              - 레이아웃 파일 설계<br />
+              <span>작업 툴 : Adobe Illustrator</span>
+            </p>
+          </div>
+        </div>
+
         <div id="mainlayout" class="work-box">
           <img
             src="@/assets/image/works/work04/work04-main-all.jpg"
@@ -255,7 +280,7 @@ export default {
       }
     });
 
-    $("a").click(function () {
+    $(".works-aside ul li a").click(function () {
       $("html, body").animate(
         {
           scrollTop: $($.attr(this, "href")).offset().top
@@ -548,6 +573,36 @@ section {
   .border-between {
     margin-right: 5rem;
   }
+
+  .pdf_btn {
+    width: auto;
+    height: 2.5rem;
+    background: #fff;
+    color: $blue;
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: inline-block;
+    padding: 0 2rem 0 1rem;
+    border-radius: 0.25rem;
+    transition: background 0.5s;
+    line-height: 2.5rem;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      right: 0.75rem;
+      transform: translateY(-50%);
+      width: 0.85rem;
+      height: 0.85rem;
+      filter: invert(16%) sepia(86%) saturate(5034%) hue-rotate(228deg)
+        brightness(96%) contrast(96%);
+    }
+
+    &:hover {
+      background: rgb(202, 202, 202);
+    }
+  }
 }
 
 .work-info {
@@ -673,8 +728,23 @@ section {
   .work-box-inner {
     display: flex;
     justify-content: space-around;
+
     .border-between {
       margin-right: 0;
+    }
+
+    .pdf_btn {
+      padding: 0 3rem 0 2rem;
+
+      img {
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+      }
+
+      &:hover {
+        background: #fff;
+      }
     }
   }
   .phone-border {
